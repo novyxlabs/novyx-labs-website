@@ -25,12 +25,13 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Send email using Resend
+    console.log('Attempting to send email via Resend...')
+
+    // Send email using Resend - simplest possible version
     const { data, error } = await resend.emails.send({
       from: 'onboarding@resend.dev',
-      to: ['blake@novyxlabs.com'],
-      reply_to: email,
-      subject: `New Contact Form Submission from ${name}`,
+      to: 'blake@novyxlabs.com',
+      subject: `Contact Form: ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>
         <p><strong>Name:</strong> ${name}</p>
@@ -40,6 +41,8 @@ export async function POST(request: NextRequest) {
         <p>${message.replace(/\n/g, '<br>')}</p>
       `,
     })
+
+    console.log('Resend response:', { data, error })
 
     if (error) {
       console.error('Resend error details:', JSON.stringify(error, null, 2))
