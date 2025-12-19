@@ -48,22 +48,6 @@ export function Hero() {
               </Button>
             </Link>
           </div>
-
-          {/* Stats */}
-          <div className="mt-16 grid grid-cols-3 gap-8 max-w-2xl mx-auto">
-            <div>
-              <div className="text-3xl sm:text-4xl font-bold gradient-text">$29</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">Starting Price</div>
-            </div>
-            <div>
-              <div className="text-3xl sm:text-4xl font-bold gradient-text">5 min</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">Average Time</div>
-            </div>
-            <div>
-              <div className="text-3xl sm:text-4xl font-bold gradient-text">100%</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">Digital</div>
-            </div>
-          </div>
         </div>
       </div>
 
