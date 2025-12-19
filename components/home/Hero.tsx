@@ -24,14 +24,14 @@ export function Hero() {
 
           {/* Headline */}
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
-            Legal Automation for{' '}
-            <span className="gradient-text">Modern Startups</span>
+            Building Tools for{' '}
+            <span className="gradient-text">Modern Founders</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-10 max-w-3xl mx-auto">
-            Novyx Labs builds intelligent legal tools that help founders move faster.
-            From document generation to compliance tracking—we've got you covered.
+            Novyx Labs creates software that helps entrepreneurs build faster and smarter.
+            We solve the problems that slow founders down.
           </p>
 
           {/* CTA Buttons */}

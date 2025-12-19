@@ -26,7 +26,7 @@ export function Footer() {
               <span className="font-bold text-xl gradient-text">Novyx Labs</span>
             </div>
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              Building intelligent legal tools for modern startups.
+              Building software that helps founders move faster.
             </p>
             <div className="flex space-x-4 mt-4">
               <a

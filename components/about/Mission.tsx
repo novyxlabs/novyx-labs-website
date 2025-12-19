@@ -15,12 +15,13 @@ export function Mission() {
         </h1>
         
         <p className="text-2xl text-gray-600 dark:text-gray-300 leading-relaxed">
-          To empower founders with the legal tools they need to build confidently,
-          without the traditional barriers of cost, complexity, and time.
+          To empower founders with the tools they need to build confidently,
+          removing the barriers that slow down innovation.
         </p>
       </div>
     </section>
   )
 }
+
 
 
