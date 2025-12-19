@@ -24,27 +24,27 @@ export function Hero() {
 
           {/* Headline */}
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
-            Legal Tools for{' '}
-            <span className="gradient-text">Modern Founders</span>
+            Legal Automation for{' '}
+            <span className="gradient-text">Modern Startups</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-10 max-w-3xl mx-auto">
-            Build your startup faster with automated legal tools designed for founders.
-            Get professional legal documents in minutes, not weeks.
+            Novyx Labs builds intelligent legal tools that help founders move faster.
+            From document generation to compliance tracking—we've got you covered.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/products">
               <Button size="lg" className="group">
-                Get Started
+                Explore Products
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
             <Link href="/about">
               <Button size="lg" variant="outline">
-                Learn More
+                About Novyx Labs
               </Button>
             </Link>
           </div>

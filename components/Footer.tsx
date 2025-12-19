@@ -3,17 +3,12 @@ import { Mail, Github, Twitter, Linkedin } from 'lucide-react'
 
 const navigation = {
   product: [
+    { name: 'All Products', href: '/products' },
     { name: 'Legal Generator', href: '/products' },
-    { name: 'Pricing', href: '/products' },
-    { name: 'Documentation', href: '#' },
   ],
   company: [
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
-  ],
-  legal: [
-    { name: 'Privacy Policy', href: '#' },
-    { name: 'Terms of Service', href: '#' },
   ],
 }
 
@@ -21,7 +16,7 @@ export function Footer() {
   return (
     <footer className="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div className="col-span-1">
             <div className="flex items-center space-x-2 mb-4">
@@ -31,11 +26,11 @@ export function Footer() {
               <span className="font-bold text-xl gradient-text">Novyx Labs</span>
             </div>
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              Legal tools for modern founders.
+              Building intelligent legal tools for modern startups.
             </p>
             <div className="flex space-x-4 mt-4">
               <a
-                href="mailto:blake@novyxlabs.com"
+                href="mailto:novyxlabs@gmail.com"
                 className="text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                 aria-label="Email"
               >
@@ -44,10 +39,10 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Product */}
+          {/* Products */}
           <div>
             <h3 className="font-semibold text-sm text-gray-900 dark:text-white mb-4">
-              Product
+              Products
             </h3>
             <ul className="space-y-3">
               {navigation.product.map((item) => (
@@ -70,25 +65,6 @@ export function Footer() {
             </h3>
             <ul className="space-y-3">
               {navigation.company.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h3 className="font-semibold text-sm text-gray-900 dark:text-white mb-4">
-              Legal
-            </h3>
-            <ul className="space-y-3">
-              {navigation.legal.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}

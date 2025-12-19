@@ -10,10 +10,10 @@ export function FeaturedProduct() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-            Meet <span className="gradient-text">Novyx Legal Generator</span>
+            Our <span className="gradient-text">Product Suite</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Our flagship product that makes legal document creation effortless
+            A growing ecosystem of legal tools built specifically for startups and founders
           </p>
         </div>
 
@@ -46,11 +46,12 @@ export function FeaturedProduct() {
           <div className="space-y-8">
             <div>
               <h3 className="text-3xl font-bold mb-4">
-                Generate Professional Legal Documents in Minutes
+                <span className="gradient-text">Novyx Legal Generator</span> — Now Live
               </h3>
               <p className="text-lg text-gray-600 dark:text-gray-300">
-                Answer a few simple questions and get customized, lawyer-reviewed legal documents
-                instantly. No legal jargon, no expensive lawyer fees.
+                Our first product: Generate professional legal documents in minutes. 
+                Answer simple questions, get customized lawyer-reviewed documents instantly. 
+                No jargon, no expensive fees.
               </p>
             </div>
 
@@ -96,7 +97,7 @@ export function FeaturedProduct() {
             <div className="pt-4">
               <Link href="/products">
                 <Button size="lg" className="group">
-                  Try Legal Generator
+                  View All Products
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
