@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
     const { data, error } = await resend.emails.send({
       from: 'Novyx Labs <onboarding@resend.dev>',
       to: ['blake@novyxlabs.com'],
-      replyTo: email,
+      reply_to: email,
       subject: `New Contact Form Submission from ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>
