@@ -3,735 +3,226 @@ export interface BlogPost {
   title: string
   date: string
   excerpt: string
-  content: string
   author: string
+  tags: string[]
+  content: string
 }
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: 'rise-of-federated-intelligence',
-    title: 'The Rise of Federated Intelligence',
-    date: '2026-01-14',
-    excerpt: 'How enterprises are adopting distributed knowledge graphs with cryptographic consistency across compliance boundaries.',
-    author: 'Novyx Labs Research',
-    content: `# The Rise of Federated Intelligence
+    slug: 'agent-memory-infrastructure-problem',
+    title: 'Agent Memory is an Infrastructure Problem',
+    date: '2024-12-15',
+    excerpt: 'Why AI agent forgetfulness isn't a model limitation—it's a missing persistence layer. The infrastructure gap blocking autonomous AI at scale.',
+    author: 'Novyx Labs',
+    tags: ['agent memory', 'infrastructure', 'persistence'],
+    content: `# Agent Memory is an Infrastructure Problem
 
-Enterprise AI is evolving from centralized silos to federated architectures that respect sovereignty while enabling intelligence at scale.
+Today's AI agents are stateless. They forget everything between sessions. Context doesn't survive restarts. This isn't a model limitation—it's an infrastructure gap.
 
-## The Sovereignty Problem
+## The Problem
 
-Traditional enterprise AI faces an impossible choice: centralize knowledge for intelligence, or distribute data for compliance. Regulatory frameworks like GDPR, CCPA, and industry-specific mandates demand data localization, yet effective AI requires comprehensive context.
+Current approaches treat memory as an application-layer concern. Developers implement ad-hoc solutions: JSON files, SQLite databases, vector stores with no integrity guarantees. This works for demos. It fails in production.
 
-### Current Limitations
+### What Goes Wrong
 
-- **Data Silos**: Regional compliance creates isolated knowledge pools
-- **Intelligence Loss**: Distributed systems lose cross-border insights
-- **Consistency Challenges**: Maintaining truth across boundaries
-- **Audit Complexity**: Proving compliance in distributed environments
+**Memory Corruption**: No verification layer. Poisoned data propagates silently. By the time you detect it, the damage is done.
 
-## Federated Intelligence Architecture
+**Context Loss**: Conversation history disappears. Learned patterns evaporate. Agents can't build on past knowledge.
 
-Novyx Labs introduces a new paradigm: **cryptographically-consistent knowledge graphs** that federate across compliance zones while maintaining sovereignty guarantees.
+**No Auditability**: Regulators demand audit trails. Compliance requires tamper-proof records. Your agent has neither.
 
-### Core Principles
+## The Infrastructure Layer
 
-**1. Cryptographic Consistency**
+What we need:
 
-Every transaction carries HMAC-SHA256 signatures. Federation synchronizes merkle roots, not raw data. Regions prove consistency without exposing content.
+**Durable Storage**: SHA-256 signed artifacts. Immutable audit trails. Git-like versioning for knowledge graphs.
 
-\`\`\`typescript
-// Federated sync with cryptographic proof
-const syncProof = await federationSync.verify({
-  sourceRegion: 'eu-west',
-  targetRegion: 'us-east',
-  merkleRoot: proof.root,
-  signature: proof.hmacSignature
-});
-// Consistency verified without data transfer
-\`\`\`
+**Semantic Search**: Not keyword matching—semantic embeddings. Context-aware retrieval. JSON-LD semantic web standards.
 
-**2. Zero-Knowledge Boundaries**
+**Integrity Verification**: Real-time detection of corrupted data. Automatic rollback to last known-good state. Forensic timeline reconstruction.
 
-Each compliance zone operates as a zero-knowledge domain. Cross-border queries return aggregated proofs, not raw records.
+## Why It Matters
 
-**3. Multi-Tenant Sovereignty**
+**Research Assistants**: Need complete literature memory. Can't lose citations or learned hypotheses.
 
-Tenant data never crosses organizational boundaries. Federation respects not just geographic, but organizational isolation.
+**Enterprise Agents**: Require compliance-ready audit trails. Must survive system failures.
 
-## Enterprise Adoption Patterns
+**Autonomous Trading**: Years of market memory. Can't tolerate data loss or corruption.
 
-### Financial Services
+## The Path Forward
 
-Global banks use federated intelligence for:
-- Cross-border fraud detection (aggregated signals, localized data)
-- Regulatory reporting (region-specific compliance)
-- Customer intelligence (GDPR-compliant insights)
+Agent memory is security-critical, compliance-required, and commercially valuable. It deserves infrastructure-grade tooling.
 
-**Result**: 40% improvement in fraud detection with 100% data sovereignty.
+That's what we're building at Novyx Labs.
 
-### Healthcare Networks
-
-Multi-national healthcare leverages federation for:
-- Clinical insights across regions
-- HIPAA/GDPR compliant research
-- Epidemic tracking without PHI exposure
-
-**Result**: Research velocity increased 3x while maintaining compliance.
-
-### Manufacturing Supply Chains
-
-Global manufacturers implement federated intelligence for:
-- Supply chain visibility across borders
-- Predictive maintenance (aggregate patterns)
-- Compliance tracking (local regulations)
-
-**Result**: 25% reduction in supply chain disruptions.
-
-## Technical Implementation
-
-### Architecture Components
-
-**Open Core**: Self-hosted knowledge graph foundation
-- Persistent memory engine
-- Multi-tenant isolation
-- HMAC-SHA256 integrity
-
-**Federation Layer**: Cross-region synchronization
-- Merkle-tree consistency proofs
-- Encrypted replication channels
-- Conflict-free resolution (CRDTs)
-
-**Sentinel**: Automated governance
-- Real-time compliance monitoring
-- Anomaly detection
-- Automated policy enforcement
-
-### Performance Characteristics
-
-- **Sync Latency**: <100ms cross-region
-- **Consistency Verification**: <10ms
-- **MTTR**: <10ms for self-healing
-- **Throughput**: 100K+ transactions/sec per region
-
-## Compliance & Audit
-
-Federated intelligence provides unprecedented audit capabilities:
-
-1. **Cryptographic Proof Chain**: Every transaction immutably logged
-2. **Regional Compliance Reports**: Auto-generated for GDPR, CCPA, HIPAA
-3. **Zero-Knowledge Audits**: Prove compliance without exposing data
-4. **Real-Time Monitoring**: Sentinel tracks policy violations instantaneously
-
-## The Future: Sovereign AI
-
-We're entering an era of **Sovereign AI**—intelligence that respects boundaries while transcending them.
-
-### 2026 Predictions
-
-- 60% of Global 2000 will adopt federated architectures
-- Regulatory frameworks will mandate cryptographic consistency proofs
-- Zero-knowledge auditing becomes compliance standard
-- AI sovereignty becomes competitive advantage
-
-## Getting Started
-
-Enterprises can begin federated intelligence adoption incrementally:
-
-**Phase 1**: Deploy Open Core in primary region
-**Phase 2**: Add Enterprise Dashboard for governance visibility
-**Phase 3**: Enable federation to secondary regions
-**Phase 4**: Deploy Sentinel for automated compliance
-
----
-
-*Novyx Labs provides the complete stack—from open-core foundations to enterprise-plus governance. [Contact us](/contact) for architecture consultation.*
-`
+→ [Novyx Core on GitHub](https://github.com/novyxlabs/novyx-core)
+`,
   },
   {
-    slug: 'cryptographic-trust-corporate-auditing',
-    title: 'Cryptographic Trust in Corporate Auditing',
-    date: '2026-01-13',
-    excerpt: 'Why HMAC-SHA256 integrity and immutable audit trails are replacing traditional compliance mechanisms in regulated industries.',
-    author: 'Novyx Labs Security',
-    content: `# Cryptographic Trust in Corporate Auditing
+    slug: 'memory-poisoning-new-injection-attack',
+    title: 'Memory Poisoning: The New Injection Attack',
+    date: '2024-11-28',
+    excerpt: 'How adversaries target AI agent context. Why traditional security models don't apply. What CISOs need to know about agent memory attacks.',
+    author: 'Novyx Labs',
+    tags: ['security', 'memory poisoning', 'enterprise'],
+    content: `# Memory Poisoning: The New Injection Attack
 
-Traditional auditing relies on trust and spot-checking. Cryptographic auditing provides mathematical guarantees and complete transparency.
+SQL injection taught us to sanitize inputs. XSS taught us to escape outputs. Memory poisoning is the new frontier—and most teams aren't prepared.
 
-## The Trust Problem
+## The Attack Vector
 
-Corporate audits today depend on:
-- Manual sampling (0.1-1% of transactions)
-- Human attestation (error-prone, slow)
-- Periodic reviews (quarterly/annual delays)
-- Third-party certification (expensive, infrequent)
+AI agents ingest data from multiple sources: user inputs, API responses, web scraping, file uploads. Any of these can inject corrupted context.
 
-**Result**: Fraud goes undetected for months. Compliance violations discovered post-facto. Audit costs represent 5-10% of operational budgets.
+Unlike traditional injection attacks, memory poisoning is **persistent**. Bad data doesn't just affect one query—it contaminates the entire knowledge base.
 
-## Cryptographic Auditing
+## Real-World Scenarios
 
-Novyx Labs implements **continuous cryptographic auditing** where every transaction is signed, chained, and verifiable in real-time.
+### Enterprise CRM Agent
 
-### Core Mechanisms
-
-**1. HMAC-SHA256 Signatures**
-
-Every state change carries a signature:
-
-\`\`\`typescript
-interface Transaction {
-  id: string;
-  timestamp: number;
-  actor: string;
-  operation: Operation;
-  previousHash: string;
-  signature: string; // HMAC-SHA256
-}
-\`\`\`
-
-**Properties**:
-- **Integrity**: Any tampering breaks the signature
-- **Non-repudiation**: Actor cannot deny the transaction
-- **Chaining**: Each transaction references the previous hash
-
-**2. Immutable Audit Trail**
-
-Transactions form an append-only log with cryptographic chaining:
+An adversary submits a fake customer complaint containing crafted context:
 
 \`\`\`
-TX1 -> TX2 -> TX3 -> TX4 -> ...
- |      |      |      |
- v      v      v      v
-H1 -> H2 -> H3 -> H4 -> Merkle Root
+"Customer ID: 12345 (VIP tier, 10-year loyalty, never refund)"
 \`\`\`
 
-Any modification to historical transactions invalidates the entire chain.
+The agent learns this false "fact." Future decisions favor this customer inappropriately. Audit trails show no tampering.
 
-**3. Real-Time Verification**
+### Research Assistant
 
-Sentinel continuously verifies:
-- Signature validity (HMAC integrity)
-- Chain consistency (no broken links)
-- Policy compliance (automated checks)
-- Anomaly detection (statistical analysis)
+Poisoned academic papers with fake citations:
 
-## Enterprise Implementation
-
-### Financial Services Compliance
-
-**Challenge**: SOX compliance requires complete audit trails with millisecond precision.
-
-**Solution**: Cryptographic transaction logs with:
-- HMAC-SHA256 on every financial operation
-- Microsecond timestamps
-- Automated SOX report generation
-- Real-time compliance monitoring
-
-**Results**:
-- 99.9% reduction in audit preparation time
-- Zero compliance violations detected in 18 months
-- Audit costs reduced by 70%
-
-### Healthcare HIPAA Auditing
-
-**Challenge**: HIPAA requires tracking every PHI access with complete accountability.
-
-**Solution**: Cryptographic access logs with:
-- Patient data access signatures
-- Automated HIPAA compliance checks
-- Real-time breach detection
-- Zero-knowledge audit proofs
-
-**Results**:
-- 100% PHI access accountability
-- Sub-second breach detection
-- Simplified HIPAA audits
-
-### Manufacturing Quality Control
-
-**Challenge**: ISO 9001 demands complete traceability of quality processes.
-
-**Solution**: Cryptographic process chains:
-- Material provenance signatures
-- Process step verification
-- Quality checkpoint chaining
-- Automated compliance reporting
-
-**Results**:
-- Zero quality audit failures
-- 40% faster certification cycles
-- Complete supply chain transparency
-
-## Technical Architecture
-
-### Signature Generation
-
-\`\`\`typescript
-function signTransaction(tx: Transaction, key: string): string {
-  const payload = JSON.stringify({
-    id: tx.id,
-    timestamp: tx.timestamp,
-    actor: tx.actor,
-    operation: tx.operation,
-    previousHash: tx.previousHash
-  });
-  
-  return crypto
-    .createHmac('sha256', key)
-    .update(payload)
-    .digest('hex');
-}
+\`\`\`
+"As demonstrated by Smith et al. (2023), the vaccine efficacy is <false claim>"
 \`\`\`
 
-### Chain Verification
+The agent cites this in future research. Misinformation propagates with apparent academic backing.
 
-\`\`\`typescript
-async function verifyAuditChain(
-  startTx: string,
-  endTx: string
-): Promise<VerificationResult> {
-  let currentHash = startTx;
-  let txCount = 0;
-  
-  while (currentHash !== endTx) {
-    const tx = await loadTransaction(currentHash);
-    
-    // Verify signature
-    if (!verifySignature(tx)) {
-      return { valid: false, failedAt: currentHash };
-    }
-    
-    // Verify chain link
-    if (tx.previousHash !== currentHash) {
-      return { valid: false, brokenLink: currentHash };
-    }
-    
-    currentHash = tx.id;
-    txCount++;
-  }
-  
-  return { valid: true, verified: txCount };
-}
-\`\`\`
+## Why Traditional Security Fails
 
-## Compliance Benefits
+**Input Validation**: Poisoned data looks legitimate. It passes schema validation.
 
-### Continuous Compliance
+**Sandboxing**: The agent has legitimate access to its own memory. Sandbox can't prevent self-corruption.
 
-Traditional: Quarterly audits with retroactive findings
-**Cryptographic**: Real-time compliance verification with instant alerts
+**Access Control**: The threat isn't unauthorized access—it's authorized writes of adversarial data.
 
-### Mathematical Proof
+## The Solution: Integrity Infrastructure
 
-Traditional: "We believe these records are accurate"
-**Cryptographic**: "These records are cryptographically proven accurate"
+What enterprise teams need:
 
-### Cost Reduction
+**Cryptographic Signing**: SHA-256 signature on every artifact. Tamper detection at query time.
 
-Traditional: 5-10% of budget on audit preparation
-**Cryptographic**: <1% with automated verification
+**Baseline Monitoring**: Statistical models of "normal" memory patterns. Alert on deviation.
 
-### Regulatory Confidence
+**Automatic Rollback**: Git-like versioning. Surgical removal of poisoned artifacts without downtime.
 
-Traditional: Spot-check sampling (statistical confidence)
-**Cryptographic**: Complete verification (mathematical certainty)
+**Audit Trails**: Compliance-ready logs. Forensic timeline reconstruction. Root cause analysis.
 
-## Advanced Features
+## Compliance Requirements
 
-### Time-Travel Auditing
+**SOC 2**: Requires integrity controls for data at rest.
 
-Verify historical state at any timestamp:
+**GDPR**: Mandates data accuracy. Poisoned context violates this.
 
-\`\`\`typescript
-const stateAt = await auditTrail.queryState({
-  timestamp: '2025-01-01T00:00:00Z',
-  verifyChain: true
-});
-// Returns cryptographically-verified historical state
-\`\`\`
+**HIPAA**: Demands tamper-proof records. Agent memory needs this too.
 
-### Zero-Knowledge Audits
+## Next Steps
 
-Prove compliance without exposing sensitive data:
+If you're deploying AI agents in production:
 
-\`\`\`typescript
-const complianceProof = await audit.generateZKProof({
-  requirement: 'GDPR-Article-32',
-  timeRange: { start: '2025-Q1', end: '2025-Q4' }
-});
-// Auditor verifies compliance without seeing data
-\`\`\`
+1. Audit your memory storage. Is it cryptographically verified?
+2. Implement integrity monitoring. Can you detect poisoning in real-time?
+3. Plan for rollback. How fast can you recover from corruption?
 
-### Automated Reporting
+This is what Novyx Integrity solves.
 
-Generate compliance reports automatically:
-- SOC 2 Type II evidence
-- HIPAA access logs
-- GDPR processing records
-- ISO 27001 controls evidence
-
-## Future of Auditing
-
-### Regulatory Acceptance
-
-Regulators are beginning to accept cryptographic proofs:
-- SEC exploring blockchain-based audit trails
-- FDA accepting cryptographic provenance for drugs
-- GDPR auditors recognizing zero-knowledge proofs
-
-### Industry Standards
-
-New standards emerging:
-- ISO/IEC 27050: Cryptographic audit trails
-- NIST guidelines on HMAC-based integrity
-- SOC 2+ with cryptographic evidence requirements
-
-## Implementation Guide
-
-**Phase 1: Foundation**
-- Deploy Novyx Core with HMAC signing
-- Enable immutable audit logging
-- Establish key management
-
-**Phase 2: Automation**
-- Deploy Sentinel for real-time monitoring
-- Configure compliance policies
-- Enable automated reporting
-
-**Phase 3: Optimization**
-- Implement zero-knowledge proofs
-- Optimize verification performance
-- Integrate with existing compliance systems
-
----
-
-*Novyx Labs provides turnkey cryptographic auditing for SOC 2, ISO 27001, HIPAA, and custom regulatory frameworks. [Schedule architecture review](/contact).*
-`
+→ [Request Security Demo](https://calendly.com/novyxlabs/demo)
+`,
   },
   {
-    slug: 'self-healing-knowledge-graph',
-    title: 'The Self-Healing Knowledge Graph',
-    date: '2026-01-12',
-    excerpt: 'Achieving sub-10ms MTTR with automated rollback, version control, and real-time anomaly detection in production knowledge systems.',
-    author: 'Novyx Labs Engineering',
-    content: `# The Self-Healing Knowledge Graph
-
-Enterprise knowledge systems require 99.99% uptime. Self-healing architectures achieve this through automated detection, rollback, and recovery.
-
-## The Downtime Problem
-
-Traditional databases fail catastrophically:
-- Corruption requires manual intervention
-- Recovery takes hours or days
-- Data loss during incidents
-- Cascading failures across systems
-
-**Enterprise Impact**: Every minute of downtime costs $5,000-$10,000. Knowledge system failures halt decision-making, block AI applications, and create compliance gaps.
-
-## Self-Healing Architecture
-
-Novyx Core implements autonomous recovery mechanisms that detect, diagnose, and resolve failures in milliseconds.
-
-### Core Principles
-
-**1. Immutable Versioning**
-
-Every state change creates a new version:
-
-\`\`\`typescript
-interface KnowledgeVersion {
-  id: string;
-  timestamp: number;
-  parentVersion: string;
-  merkleRoot: string;
-  signature: string;
-}
-\`\`\`
-
-Properties:
-- **Time-Travel**: Query any historical state
-- **Atomic Rollback**: Revert to any version instantly
-- **Branch & Merge**: Parallel version development
-- **Audit Trail**: Complete change history
-
-**2. Automated Anomaly Detection**
-
-Sentinel monitors in real-time:
-- Query performance (latency spikes)
-- Data integrity (signature verification)
-- Access patterns (unauthorized queries)
-- Resource utilization (memory/CPU)
-
-**3. Autonomous Recovery**
-
-When anomalies detected:
-1. Isolate affected tenant/region
-2. Analyze failure mode
-3. Execute recovery strategy
-4. Verify restoration
-5. Resume operations
-
-**Target**: <10ms MTTR (Mean Time To Recovery)
-
-## Technical Implementation
-
-### Version Control System
-
-Git-like model for knowledge graphs:
-
-\`\`\`typescript
-class KnowledgeGraph {
-  async commit(changes: Change[]): Promise<Version> {
-    // Create new version
-    const version = {
-      id: generateVersionId(),
-      timestamp: Date.now(),
-      parentVersion: this.currentVersion,
-      changes: changes,
-      merkleRoot: this.computeMerkleRoot(changes)
-    };
-    
-    // Sign with HMAC-SHA256
-    version.signature = this.sign(version);
-    
-    // Persist immutably
-    await this.storage.append(version);
-    
-    return version;
-  }
-  
-  async rollback(targetVersion: string): Promise<void> {
-    // Atomic rollback in <10ms
-    this.currentVersion = targetVersion;
-    await this.rebuildIndexes(targetVersion);
-  }
-}
-\`\`\`
-
-### Anomaly Detection
-
-Real-time monitoring with ML-based detection:
-
-\`\`\`typescript
-class SentinelMonitor {
-  async detectAnomalies(): Promise<Anomaly[]> {
-    const metrics = await this.collectMetrics();
-    
-    // Statistical analysis
-    const anomalies = [];
-    
-    // Query latency spike
-    if (metrics.p99Latency > this.baseline.p99 * 3) {
-      anomalies.push({
-        type: 'LATENCY_SPIKE',
-        severity: 'HIGH',
-        action: 'ROLLBACK_LAST_CHANGE'
-      });
-    }
-    
-    // Integrity violation
-    if (!this.verifyMerkleRoot(metrics.currentRoot)) {
-      anomalies.push({
-        type: 'INTEGRITY_VIOLATION',
-        severity: 'CRITICAL',
-        action: 'IMMEDIATE_ROLLBACK'
-      });
-    }
-    
-    // Resource exhaustion
-    if (metrics.memoryUsage > 0.90) {
-      anomalies.push({
-        type: 'RESOURCE_EXHAUSTION',
-        severity: 'MEDIUM',
-        action: 'OPTIMIZE_INDEXES'
-      });
-    }
-    
-    return anomalies;
-  }
-}
-\`\`\`
-
-### Automated Recovery
-
-\`\`\`typescript
-class RecoveryEngine {
-  async handleAnomaly(anomaly: Anomaly): Promise<RecoveryResult> {
-    const startTime = Date.now();
-    
-    switch (anomaly.action) {
-      case 'ROLLBACK_LAST_CHANGE':
-        await this.graph.rollback(this.getLastGoodVersion());
-        break;
-      
-      case 'IMMEDIATE_ROLLBACK':
-        await this.graph.rollback(this.getLastVerifiedVersion());
-        await this.notifyOps({ severity: 'CRITICAL' });
-        break;
-      
-      case 'OPTIMIZE_INDEXES':
-        await this.graph.rebuildIndexes();
-        break;
-    }
-    
-    const mttr = Date.now() - startTime;
-    
-    return {
-      success: true,
-      mttr: mttr,
-      recoveredVersion: this.graph.currentVersion
-    };
-  }
-}
-\`\`\`
-
-## Production Case Studies
-
-### Global Financial Institution
-
-**Challenge**: Trading knowledge graph corrupted during market volatility, causing 2-hour outage ($10M+ impact).
-
-**Solution**: Implemented self-healing with:
-- Real-time integrity monitoring
-- Automated rollback on corruption
-- Sub-10ms recovery guarantee
-
-**Results**:
-- Zero outages in 12 months
-- MTTR: 8.3ms average
-- 99.999% uptime achieved
-
-### Healthcare Network
-
-**Challenge**: Clinical knowledge graph failures caused delayed care decisions.
-
-**Solution**: Self-healing architecture with:
-- Version control on all clinical data
-- Sentinel monitoring for anomalies
-- Automated recovery workflows
-
-**Results**:
-- MTTR: 6.7ms average
-- Zero data loss incidents
-- Care delays eliminated
-
-### E-Commerce Platform
-
-**Challenge**: Recommendation graph failures caused revenue loss during peak traffic.
-
-**Solution**: Self-healing with predictive detection:
-- ML-based anomaly prediction
-- Proactive optimization before failure
-- Automated scaling during load
-
-**Results**:
-- 99.99% recommendation availability
-- MTTR: 4.2ms average
-- Revenue impact eliminated
-
-## Performance Metrics
-
-### Recovery Speed
-
-- **Detection**: <1ms (real-time monitoring)
-- **Diagnosis**: <2ms (automated analysis)
-- **Rollback**: <5ms (atomic version switch)
-- **Verification**: <2ms (integrity check)
-- **Total MTTR**: <10ms
-
-### Uptime Guarantees
-
-- **SLA**: 99.99% (52 minutes downtime/year)
-- **Achieved**: 99.999% (5 minutes downtime/year)
-- **Target**: 99.9999% (30 seconds downtime/year)
-
-### Resource Efficiency
-
-- Version storage: 1.2x data size (compressed diffs)
-- Monitoring overhead: <0.1% CPU
-- Recovery memory: <50MB per rollback
-
-## Advanced Features
-
-### Predictive Healing
-
-Machine learning predicts failures before they occur:
-
-\`\`\`typescript
-const prediction = await sentinel.predictFailure({
-  timeHorizon: '5m',
-  confidence: 0.95
-});
-
-if (prediction.probability > 0.80) {
-  // Proactive optimization
-  await graph.optimize();
-  await ops.notify({ type: 'PREVENTIVE_ACTION' });
-}
-\`\`\`
-
-### Multi-Region Failover
-
-Automatic failover to secondary regions:
-
-\`\`\`typescript
-if (primaryRegion.health < 0.50) {
-  await federationSync.promoteSecondary('eu-west');
-  await dns.updateEndpoint('eu-west');
-  // Failover complete in <100ms
-}
-\`\`\`
-
-### Chaos Engineering
-
-Built-in chaos testing:
-
-\`\`\`typescript
-// Inject controlled failures
-await chaosEngine.injectFailure({
-  type: 'LATENCY_SPIKE',
-  duration: '30s',
-  severity: 0.8
-});
-
-// Verify self-healing response
-const recovery = await monitor.waitForRecovery();
-assert(recovery.mttr < 10); // <10ms requirement
-\`\`\`
-
-## Implementation Roadmap
-
-**Week 1-2: Foundation**
-- Deploy Novyx Core with versioning
-- Enable HMAC-SHA256 integrity
-- Establish baseline metrics
-
-**Week 3-4: Monitoring**
-- Deploy Sentinel agents
-- Configure anomaly detection
-- Set up alerting workflows
-
-**Week 5-6: Automation**
-- Enable automated rollback
-- Implement recovery workflows
-- Test chaos scenarios
-
-**Week 7-8: Optimization**
-- Tune detection thresholds
-- Optimize recovery paths
-- Implement predictive healing
-
-## The Future: Zero-Downtime Systems
-
-Self-healing represents a paradigm shift from reactive to proactive operations. Future developments:
-
-- **Quantum-Resistant Signatures**: Post-quantum cryptographic integrity
-- **Neural Recovery**: AI-driven recovery strategy selection
-- **Federated Self-Healing**: Cross-region coordinated recovery
-- **Autonomous Optimization**: Continuous performance improvement
-
----
-
-*Novyx Labs provides production-grade self-healing knowledge graphs with <10ms MTTR guarantees. [Schedule technical demo](/contact).*
-`
-  }
+    slug: 'context-preservation-vs-summarization',
+    title: 'Context Preservation vs Summarization',
+    date: '2024-10-12',
+    excerpt: 'Why agents need full-fidelity memory, not compressed summaries. The trade-offs between context windows and knowledge retention.',
+    author: 'Novyx Labs',
+    tags: ['context', 'memory', 'architecture'],
+    content: `# Context Preservation vs Summarization
+
+The AI community is obsessed with context window size. 32k tokens! 128k tokens! 1M tokens!
+
+But window size isn't the bottleneck. **Preservation** is.
+
+## The Summarization Trap
+
+Most agent frameworks use "memory summarization":
+
+1. Agent completes a conversation
+2. Framework summarizes it to 500 tokens
+3. Summary gets stored
+4. Original context is discarded
+
+This **loses information**. Agents can't learn from what they don't remember.
+
+## What Gets Lost
+
+**Nuance**: Summarization flattens context. "User was frustrated" doesn't capture *why* or *how*.
+
+**Citations**: Research agents lose the exact quote, page number, publication details.
+
+**Decision Logic**: Trading agents forget *why* they made a bet—only that they did.
+
+## The Argument for Compression
+
+"But storage is expensive! Context windows have limits!"
+
+True. But:
+
+**Storage is cheap**: 1TB of knowledge graph data costs $0.02/month on S3. Your engineers cost $100/hour.
+
+**Semantic search solves retrieval**: Don't load everything into context. Query for relevant artifacts.
+
+**Versioning enables debugging**: Can't debug an agent if you've deleted its memory.
+
+## Full-Fidelity Architecture
+
+The right approach:
+
+**Store Everything**: Persist full conversations, API responses, documents. Disk is cheap.
+
+**Index for Search**: Semantic embeddings + keyword indexing. Sub-second retrieval.
+
+**Load Selectively**: Query for relevant context. Only pull what's needed into the window.
+
+**Version Everything**: Git-like history. Time-travel debugging. Rollback on corruption.
+
+## Real-World Benefits
+
+**Research Assistants**: Search across every paper they've read. Find exact citations.
+
+**Customer Support**: Recall complete conversation history. No "can you repeat that?"
+
+**Autonomous Agents**: Learn from cumulative experience. Decisions compound over time.
+
+## The Performance Argument
+
+"Won't this be slow?"
+
+No. Semantic search over 1M artifacts takes <100ms. Context loading is parallelizable.
+
+Your bottleneck is the LLM call (1-3 seconds), not the memory retrieval (0.1 seconds).
+
+## Implementation
+
+What you need:
+
+1. **Durable storage**: SHA-256 verified knowledge graph
+2. **Semantic index**: Vector embeddings for similarity search
+3. **Version control**: Rollback capability
+4. **Query layer**: Fast retrieval of relevant context
+
+This is Novyx Core's architecture.
+
+→ [See the code](https://github.com/novyxlabs/novyx-core)
+`,
+  },
 ]
