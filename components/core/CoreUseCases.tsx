@@ -1,6 +1,6 @@
 'use client'
 
-import { Building2, Landmark, Hospital, Factory, Shield, Network } from 'lucide-react'
+import { Building2, Landmark, Activity, Factory, Shield, Network } from 'lucide-react'
 
 const useCases = [
   {
@@ -10,7 +10,7 @@ const useCases = [
     stats: '40% fraud detection improvement',
   },
   {
-    icon: Hospital,
+    icon: Activity,
     title: 'Healthcare Networks',
     description: 'Clinical insights across multi-national systems. HIPAA/GDPR compliant research pipelines. Epidemic tracking without PHI exposure using zero-knowledge proofs.',
     stats: '3x research velocity increase',
