@@ -31,8 +31,8 @@ const ecosystemItems = [
   },
   {
     icon: <Zap className="w-6 h-6 text-white" />,
-    title: 'What's Next?',
-    description: 'We're exploring more AI infrastructure for builders. Share your ideas on GitHub.',
+    title: "What's Next?",
+    description: "We're exploring more AI infrastructure for builders. Share your ideas on GitHub.",
     badge: 'You Tell Us',
     badgeColor: 'bg-gray-500',
     href: 'https://github.com/novyxlabs',
