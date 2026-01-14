@@ -8,15 +8,7 @@ export interface BlogPost {
   content: string
 }
 
-export const blogPosts: BlogPost[] = [
-  {
-    slug: 'agent-memory-infrastructure-problem',
-    title: 'Agent Memory is an Infrastructure Problem',
-    date: '2024-12-15',
-    excerpt: 'Why AI agent forgetfulness isn't a model limitation—it's a missing persistence layer. The infrastructure gap blocking autonomous AI at scale.',
-    author: 'Novyx Labs',
-    tags: ['agent memory', 'infrastructure', 'persistence'],
-    content: `# Agent Memory is an Infrastructure Problem
+const post1 = `# Agent Memory is an Infrastructure Problem
 
 Today's AI agents are stateless. They forget everything between sessions. Context doesn't survive restarts. This isn't a model limitation—it's an infrastructure gap.
 
@@ -54,19 +46,9 @@ What we need:
 
 Agent memory is security-critical, compliance-required, and commercially valuable. It deserves infrastructure-grade tooling.
 
-That's what we're building at Novyx Labs.
+That's what we're building at Novyx Labs.`
 
-→ [Novyx Core on GitHub](https://github.com/novyxlabs/novyx-core)
-`,
-  },
-  {
-    slug: 'memory-poisoning-new-injection-attack',
-    title: 'Memory Poisoning: The New Injection Attack',
-    date: '2024-11-28',
-    excerpt: 'How adversaries target AI agent context. Why traditional security models don't apply. What CISOs need to know about agent memory attacks.',
-    author: 'Novyx Labs',
-    tags: ['security', 'memory poisoning', 'enterprise'],
-    content: `# Memory Poisoning: The New Injection Attack
+const post2 = `# Memory Poisoning: The New Injection Attack
 
 SQL injection taught us to sanitize inputs. XSS taught us to escape outputs. Memory poisoning is the new frontier—and most teams aren't prepared.
 
@@ -80,23 +62,11 @@ Unlike traditional injection attacks, memory poisoning is **persistent**. Bad da
 
 ### Enterprise CRM Agent
 
-An adversary submits a fake customer complaint containing crafted context:
-
-\`\`\`
-"Customer ID: 12345 (VIP tier, 10-year loyalty, never refund)"
-\`\`\`
-
-The agent learns this false "fact." Future decisions favor this customer inappropriately. Audit trails show no tampering.
+An adversary submits a fake customer complaint containing crafted context. The agent learns this false "fact." Future decisions favor this customer inappropriately. Audit trails show no tampering.
 
 ### Research Assistant
 
-Poisoned academic papers with fake citations:
-
-\`\`\`
-"As demonstrated by Smith et al. (2023), the vaccine efficacy is <false claim>"
-\`\`\`
-
-The agent cites this in future research. Misinformation propagates with apparent academic backing.
+Poisoned academic papers with fake citations. The agent cites this in future research. Misinformation propagates with apparent academic backing.
 
 ## Why Traditional Security Fails
 
@@ -134,19 +104,9 @@ If you're deploying AI agents in production:
 2. Implement integrity monitoring. Can you detect poisoning in real-time?
 3. Plan for rollback. How fast can you recover from corruption?
 
-This is what Novyx Integrity solves.
+This is what Novyx Integrity solves.`
 
-→ [Request Security Demo](https://calendly.com/novyxlabs/demo)
-`,
-  },
-  {
-    slug: 'context-preservation-vs-summarization',
-    title: 'Context Preservation vs Summarization',
-    date: '2024-10-12',
-    excerpt: 'Why agents need full-fidelity memory, not compressed summaries. The trade-offs between context windows and knowledge retention.',
-    author: 'Novyx Labs',
-    tags: ['context', 'memory', 'architecture'],
-    content: `# Context Preservation vs Summarization
+const post3 = `# Context Preservation vs Summarization
 
 The AI community is obsessed with context window size. 32k tokens! 128k tokens! 1M tokens!
 
@@ -207,7 +167,7 @@ The right approach:
 
 "Won't this be slow?"
 
-No. Semantic search over 1M artifacts takes <100ms. Context loading is parallelizable.
+No. Semantic search over 1M artifacts takes less than 100ms. Context loading is parallelizable.
 
 Your bottleneck is the LLM call (1-3 seconds), not the memory retrieval (0.1 seconds).
 
@@ -220,9 +180,34 @@ What you need:
 3. **Version control**: Rollback capability
 4. **Query layer**: Fast retrieval of relevant context
 
-This is Novyx Core's architecture.
+This is Novyx Core's architecture.`
 
-→ [See the code](https://github.com/novyxlabs/novyx-core)
-`,
+export const blogPosts: BlogPost[] = [
+  {
+    slug: 'agent-memory-infrastructure-problem',
+    title: 'Agent Memory is an Infrastructure Problem',
+    date: '2024-12-15',
+    excerpt: 'Why AI agent forgetfulness isn\'t a model limitation—it\'s a missing persistence layer. The infrastructure gap blocking autonomous AI at scale.',
+    author: 'Novyx Labs',
+    tags: ['agent memory', 'infrastructure', 'persistence'],
+    content: post1,
+  },
+  {
+    slug: 'memory-poisoning-new-injection-attack',
+    title: 'Memory Poisoning: The New Injection Attack',
+    date: '2024-11-28',
+    excerpt: 'How adversaries target AI agent context. Why traditional security models don\'t apply. What CISOs need to know about agent memory attacks.',
+    author: 'Novyx Labs',
+    tags: ['security', 'memory poisoning', 'enterprise'],
+    content: post2,
+  },
+  {
+    slug: 'context-preservation-vs-summarization',
+    title: 'Context Preservation vs Summarization',
+    date: '2024-10-12',
+    excerpt: 'Why agents need full-fidelity memory, not compressed summaries. The trade-offs between context windows and knowledge retention.',
+    author: 'Novyx Labs',
+    tags: ['context', 'memory', 'architecture'],
+    content: post3,
   },
 ]
