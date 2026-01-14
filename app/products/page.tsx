@@ -8,102 +8,110 @@ export const metadata: Metadata = {
   keywords: ['AI infrastructure', 'agent memory', 'memory verification', 'knowledge graph', 'durable AI'],
 }
 
-const products = [
-  {
-    name: 'Novyx Core',
-    tagline: 'Knowledge graph with semantic search',
-    description: 'Cryptographically durable knowledge graph for AI agents. SHA-256 integrity. JSON-LD semantic search. Open-core foundation for agent memory.',
-    status: 'live' as const,
-    href: '/products/core',
-    iconName: 'Database',
-    metrics: ['516 artifacts verified', 'SHA-256 signed', 'MIT licensed'],
-    features: ['Semantic search', 'Version control', 'Multi-tenant ready', 'JSON-LD compliance'],
-  },
-  {
-    name: 'Novyx Integrity',
-    tagline: 'Memory verification for enterprise AI',
-    description: 'Security infrastructure for mission-critical AI agents. Real-time poisoning detection. Compliance-ready audit trails for SOC 2, GDPR, HIPAA.',
-    status: 'beta' as const,
-    href: '/products/integrity',
-    iconName: 'Shield',
-    metrics: ['<1ms detection', '100% coverage', 'SOC 2 ready'],
-    features: ['Poisoning detection', 'Auto-rollback', 'Compliance reports', 'Forensic timeline'],
-  },
-  {
-    name: 'Context Compression',
-    tagline: 'Efficient long-term memory for agents',
-    description: 'Intelligent summarization of agent memory. Keep context under token limits while preserving critical information. Lossless knowledge distillation.',
-    status: 'coming' as const,
-    href: '/products',
-    iconName: 'Zap',
-    metrics: ['Q2 2025', '90% compression', 'Zero information loss'],
-    features: ['Token optimization', 'Hierarchical storage', 'Selective recall', 'Cost reduction'],
-  },
-  {
-    name: 'Distributed Memory',
-    tagline: 'Federated knowledge across agent networks',
-    description: 'Sync agent memory across distributed systems. Cryptographic consistency proofs. Multi-region deployment. Built for agent swarms.',
-    status: 'coming' as const,
-    href: '/products',
-    iconName: 'Network',
-    metrics: ['Q3 2025', 'Multi-region', 'Cryptographic sync'],
-    features: ['Cross-region sync', 'Eventual consistency', 'Conflict resolution', 'Byzantine fault tolerance'],
-  },
-  {
-    name: 'Memory Analytics',
-    tagline: 'Observability for agent knowledge',
-    description: 'Dashboards for memory growth, query patterns, integrity metrics. Debug agent behavior. Optimize knowledge retrieval. Production monitoring.',
-    status: 'coming' as const,
-    href: '/products',
-    iconName: 'FileCode',
-    metrics: ['Q4 2025', 'Real-time metrics', 'Grafana integration'],
-    features: ['Query analytics', 'Growth tracking', 'Anomaly detection', 'Performance profiling'],
-  },
-  {
-    name: 'Your Idea',
-    tagline: 'What infrastructure do you need?',
-    description: 'We're building the persistence layer for autonomous AI. If you're solving hard problems in agent memory, we want to hear from you.',
-    status: 'future' as const,
-    href: 'https://github.com/novyxlabs/ideas',
-    iconName: 'Sparkles',
-    metrics: ['Open roadmap', 'Community-driven', 'Builder-focused'],
-    features: ['Share on GitHub', 'Join discussions', 'Influence roadmap', 'Early access'],
-  },
-]
-
-const iconMap = {
-  Database,
-  Shield,
-  Zap,
-  Network,
-  FileCode,
-  Sparkles,
-}
-
-const statusColors = {
-  live: {
-    badge: 'bg-green-500/20 text-green-400 border-green-500/30',
-    card: 'bg-pulse-950/10 border-pulse-800/30 hover:border-pulse-600',
-    icon: 'bg-pulse-500/10 border-pulse-500/30 text-pulse-400',
-  },
-  beta: {
-    badge: 'bg-blue-500/20 text-blue-400 border-blue-500/30',
-    card: 'bg-green-950/10 border-green-800/30 hover:border-green-600',
-    icon: 'bg-green-500/10 border-green-500/30 text-green-400',
-  },
-  coming: {
-    badge: 'bg-steel-500/20 text-steel-400 border-steel-500/30',
-    card: 'bg-steel-900/20 border-steel-700/30 hover:border-steel-600',
-    icon: 'bg-steel-500/10 border-steel-500/30 text-steel-400',
-  },
-  future: {
-    badge: 'bg-purple-500/20 text-purple-400 border-purple-500/30',
-    card: 'bg-purple-950/10 border-purple-800/30 hover:border-purple-600',
-    icon: 'bg-purple-500/10 border-purple-500/30 text-purple-400',
-  },
-}
-
 export default function ProductsPage() {
+  const products = [
+    {
+      name: 'Novyx Core',
+      tagline: 'Knowledge graph with semantic search',
+      description: 'Cryptographically durable knowledge graph for AI agents. SHA-256 integrity. JSON-LD semantic search. Open-core foundation for agent memory.',
+      status: 'live',
+      href: '/products/core',
+      Icon: Database,
+      metrics: ['516 artifacts verified', 'SHA-256 signed', 'MIT licensed'],
+      features: ['Semantic search', 'Version control', 'Multi-tenant ready', 'JSON-LD compliance'],
+    },
+    {
+      name: 'Novyx Integrity',
+      tagline: 'Memory verification for enterprise AI',
+      description: 'Security infrastructure for mission-critical AI agents. Real-time poisoning detection. Compliance-ready audit trails for SOC 2, GDPR, HIPAA.',
+      status: 'beta',
+      href: '/products/integrity',
+      Icon: Shield,
+      metrics: ['<1ms detection', '100% coverage', 'SOC 2 ready'],
+      features: ['Poisoning detection', 'Auto-rollback', 'Compliance reports', 'Forensic timeline'],
+    },
+    {
+      name: 'Context Compression',
+      tagline: 'Efficient long-term memory for agents',
+      description: 'Intelligent summarization of agent memory. Keep context under token limits while preserving critical information. Lossless knowledge distillation.',
+      status: 'coming',
+      href: '/products',
+      Icon: Zap,
+      metrics: ['Q2 2025', '90% compression', 'Zero information loss'],
+      features: ['Token optimization', 'Hierarchical storage', 'Selective recall', 'Cost reduction'],
+    },
+    {
+      name: 'Distributed Memory',
+      tagline: 'Federated knowledge across agent networks',
+      description: 'Sync agent memory across distributed systems. Cryptographic consistency proofs. Multi-region deployment. Built for agent swarms.',
+      status: 'coming',
+      href: '/products',
+      Icon: Network,
+      metrics: ['Q3 2025', 'Multi-region', 'Cryptographic sync'],
+      features: ['Cross-region sync', 'Eventual consistency', 'Conflict resolution', 'Byzantine fault tolerance'],
+    },
+    {
+      name: 'Memory Analytics',
+      tagline: 'Observability for agent knowledge',
+      description: 'Dashboards for memory growth, query patterns, integrity metrics. Debug agent behavior. Optimize knowledge retrieval. Production monitoring.',
+      status: 'coming',
+      href: '/products',
+      Icon: FileCode,
+      metrics: ['Q4 2025', 'Real-time metrics', 'Grafana integration'],
+      features: ['Query analytics', 'Growth tracking', 'Anomaly detection', 'Performance profiling'],
+    },
+    {
+      name: 'Your Idea',
+      tagline: 'What infrastructure do you need?',
+      description: 'We\'re building the persistence layer for autonomous AI. If you\'re solving hard problems in agent memory, we want to hear from you.',
+      status: 'future',
+      href: 'https://github.com/novyxlabs/ideas',
+      Icon: Sparkles,
+      metrics: ['Open roadmap', 'Community-driven', 'Builder-focused'],
+      features: ['Share on GitHub', 'Join discussions', 'Influence roadmap', 'Early access'],
+    },
+  ]
+
+  const getStatusColors = (status: string) => {
+    switch (status) {
+      case 'live':
+        return {
+          badge: 'bg-green-500/20 text-green-400 border-green-500/30',
+          card: 'bg-pulse-950/10 border-pulse-800/30 hover:border-pulse-600',
+          icon: 'bg-pulse-500/10 border-pulse-500/30 text-pulse-400',
+          text: 'text-pulse-400',
+        }
+      case 'beta':
+        return {
+          badge: 'bg-blue-500/20 text-blue-400 border-blue-500/30',
+          card: 'bg-green-950/10 border-green-800/30 hover:border-green-600',
+          icon: 'bg-green-500/10 border-green-500/30 text-green-400',
+          text: 'text-green-400',
+        }
+      case 'coming':
+        return {
+          badge: 'bg-steel-500/20 text-steel-400 border-steel-500/30',
+          card: 'bg-steel-900/20 border-steel-700/30 hover:border-steel-600',
+          icon: 'bg-steel-500/10 border-steel-500/30 text-steel-400',
+          text: 'text-steel-400',
+        }
+      case 'future':
+        return {
+          badge: 'bg-purple-500/20 text-purple-400 border-purple-500/30',
+          card: 'bg-purple-950/10 border-purple-800/30 hover:border-purple-600',
+          icon: 'bg-purple-500/10 border-purple-500/30 text-purple-400',
+          text: 'text-purple-400',
+        }
+      default:
+        return {
+          badge: 'bg-steel-500/20 text-steel-400 border-steel-500/30',
+          card: 'bg-steel-900/20 border-steel-700/30',
+          icon: 'bg-steel-500/10 border-steel-500/30 text-steel-400',
+          text: 'text-steel-400',
+        }
+    }
+  }
+
   return (
     <div className="min-h-screen bg-void pt-20">
       {/* Hero */}
@@ -129,8 +137,9 @@ export default function ProductsPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product) => {
-              const colors = statusColors[product.status]
-              const Icon = iconMap[product.iconName as keyof typeof iconMap]
+              const colors = getStatusColors(product.status)
+              const ProductIcon = product.Icon
+              
               return (
                 <Link
                   key={product.name}
@@ -148,7 +157,7 @@ export default function ProductsPage() {
 
                   {/* Icon */}
                   <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 border ${colors.icon}`}>
-                    <Icon className="w-7 h-7" />
+                    <ProductIcon className="w-7 h-7" />
                   </div>
 
                   {/* Content */}
@@ -176,12 +185,7 @@ export default function ProductsPage() {
                   </ul>
 
                   {/* CTA */}
-                  <div className={`flex items-center space-x-2 font-mono font-semibold group-hover:translate-x-1 transition-transform ${
-                    product.status === 'live' ? 'text-pulse-400' :
-                    product.status === 'beta' ? 'text-green-400' :
-                    product.status === 'future' ? 'text-purple-400' :
-                    'text-steel-400'
-                  }`}>
+                  <div className={`flex items-center space-x-2 font-mono font-semibold group-hover:translate-x-1 transition-transform ${colors.text}`}>
                     <span>{product.status === 'coming' || product.status === 'future' ? 'View Roadmap' : 'Learn More'}</span>
                     <ArrowRight className="w-4 h-4" />
                   </div>
