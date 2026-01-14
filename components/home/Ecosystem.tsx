@@ -8,34 +8,42 @@ const ecosystemItems = [
   {
     icon: <Brain className="w-6 h-6 text-white" />,
     title: 'Novyx Core',
-    description: 'A persistent AI brain for knowledge graphs that endure. Remember everything, connect automatically.',
-    badge: 'Active',
-    badgeColor: 'bg-electric-blue',
+    description: 'Persistent AI brain for enduring knowledge graphs. The flagship powering all Labs capabilities.',
+    badge: 'Live',
+    badgeColor: 'bg-green-500',
     href: '/core',
   },
   {
     icon: <Scale className="w-6 h-6 text-white" />,
     title: 'Federation Sync',
-    description: 'Sync knowledge graphs across distributed AI systems. Multi-model collaboration with shared memory.',
-    badge: 'Q2 2026',
-    badgeColor: 'bg-gray-500',
-    href: '/solutions#federation',
+    description: 'Core extension for distributed knowledge graphs. Sync across models and regions seamlessly.',
+    badge: 'Available',
+    badgeColor: 'bg-electric-blue',
+    href: '/core#federation',
   },
   {
     icon: <Shield className="w-6 h-6 text-white" />,
     title: 'Enterprise Dashboard',
-    description: 'Monitor and manage AI knowledge graphs at scale. Analytics, insights, and control.',
-    badge: 'Q3 2026',
+    description: 'Core extension for production monitoring. Visualize, analyze, and manage at scale.',
+    badge: 'Available',
+    badgeColor: 'bg-electric-blue',
+    href: '/core#dashboard',
+  },
+  {
+    icon: <Sparkles className="w-6 h-6 text-white" />,
+    title: 'AI Agent Framework',
+    description: 'Build autonomous agents with persistent memory. Deploy intelligent workflows that learn.',
+    badge: 'Q2 2026',
     badgeColor: 'bg-gray-500',
-    href: '/solutions#dashboard',
+    href: '/ecosystem#agents',
   },
   {
     icon: <Zap className="w-6 h-6 text-white" />,
-    title: "What's Next?",
-    description: "We're exploring more AI infrastructure for builders. Share your ideas on GitHub.",
-    badge: 'You Tell Us',
+    title: 'Developer SDK',
+    description: 'Pre-built integrations and tooling. Accelerate development with Core-powered libraries.',
+    badge: 'Q3 2026',
     badgeColor: 'bg-gray-500',
-    href: 'https://github.com/novyxlabs',
+    href: '/ecosystem#sdk',
   },
 ]
 
@@ -62,8 +70,8 @@ export function Ecosystem() {
         </div>
 
         {/* Ecosystem Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 animate-slide-up">
-          {ecosystemItems.map((item, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-slide-up max-w-6xl mx-auto">
+          {ecosystemItems.slice(0, 3).map((item, index) => (
             <div
               key={item.title}
               style={{ animationDelay: `${index * 100}ms` }}
@@ -72,6 +80,24 @@ export function Ecosystem() {
               <TechTile {...item} />
             </div>
           ))}
+        </div>
+
+        {/* Future Spokes */}
+        <div className="mt-12">
+          <h3 className="text-2xl font-bold text-center mb-8 text-navy dark:text-white">
+            Future Spokes
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {ecosystemItems.slice(3).map((item, index) => (
+              <div
+                key={item.title}
+                style={{ animationDelay: `${(index + 3) * 100}ms` }}
+                className="animate-fade-in"
+              >
+                <TechTile {...item} />
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* CTA */}

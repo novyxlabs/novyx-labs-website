@@ -20,10 +20,10 @@ export function WhoWeAre() {
             <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-navy to-electric-blue flex items-center justify-center mx-auto mb-6">
               <Target className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-2xl font-bold mb-4 text-navy dark:text-white">What We Build</h3>
+            <h3 className="text-2xl font-bold mb-4 text-navy dark:text-white">Novyx Labs LLC</h3>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-              Persistent AI systems that remember. We're starting with Novyx Core—a knowledge 
-              graph that endures across conversations.
+              The umbrella for persistent AI infrastructure. Core is our flagship, with Federation
+              and Dashboard as available extensions. More spokes coming soon.
             </p>
           </div>
 
@@ -32,10 +32,10 @@ export function WhoWeAre() {
             <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-navy to-electric-blue flex items-center justify-center mx-auto mb-6">
               <Code className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-2xl font-bold mb-4 text-navy dark:text-white">Why It Matters</h3>
+            <h3 className="text-2xl font-bold mb-4 text-navy dark:text-white">The Core Vision</h3>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-              Most AI forgets everything the moment you close the chat. We're fixing that.
-              Your AI should remember, learn, and grow with you.
+              Most AI forgets. Core remembers. A persistent brain for enduring knowledge graphs
+              with multi-tenant architecture, versioning, and federation built in.
             </p>
           </div>
 
@@ -44,10 +44,10 @@ export function WhoWeAre() {
             <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-navy to-electric-blue flex items-center justify-center mx-auto mb-6">
               <Users className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-2xl font-bold mb-4 text-navy dark:text-white">Who It's For</h3>
+            <h3 className="text-2xl font-bold mb-4 text-navy dark:text-white">Built for Builders</h3>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-              Builders, founders, and developers who need AI that actually keeps context.
-              If you're tired of repeating yourself, Core is for you.
+              Developers and companies building AI products. Core powers your persistent memory
+              layer so you can focus on your product, not infrastructure.
             </p>
           </div>
         </div>

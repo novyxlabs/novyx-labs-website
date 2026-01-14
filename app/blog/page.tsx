@@ -1,13 +1,14 @@
 import { Metadata } from 'next'
-import { Newspaper, ArrowRight } from 'lucide-react'
+import { Newspaper, Calendar, User, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
+import { blogPosts } from './posts'
 
 export const metadata: Metadata = {
-  title: 'Blog - Insights on AI & Founder Tools | Novyx Labs',
-  description: 'Thoughts on AI innovation, building for founders, and the future of intelligent automation.',
+  title: 'Blog - Persistent AI Insights | Novyx Labs',
+  description: 'Technical insights on persistent AI, knowledge graphs, and building with Novyx Core.',
   openGraph: {
     title: 'Blog - Novyx Labs',
-    description: 'Insights on AI innovation and founder tools',
+    description: 'Insights on persistent AI and knowledge graphs',
     type: 'website',
   },
 }
@@ -26,61 +27,46 @@ export default function BlogPage() {
             Novyx Labs Blog
           </h1>
           <p className="text-xl text-white/80">
-            Thoughts on AI innovation, building for founders, and the future of intelligent automation.
+            Technical insights on persistent AI, knowledge graphs, and building with Core.
           </p>
         </div>
       </section>
 
-      {/* Coming Soon Message */}
+      {/* Blog Posts */}
       <section className="px-4 sm:px-6 lg:px-8 py-24">
         <div className="max-w-4xl mx-auto">
-          <div className="glass rounded-3xl p-12 text-center">
-            <div className="w-20 h-20 rounded-full bg-gradient-to-br from-navy to-electric-blue flex items-center justify-center mx-auto mb-6">
-              <Newspaper className="w-10 h-10 text-white" />
-            </div>
-            <h2 className="text-3xl font-bold mb-4 text-navy dark:text-white">
-              Blog Coming Soon
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
-              We're preparing insightful content about AI innovation, founder tools, and building the future of work.
-              Check back soon for our first posts!
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="space-y-8">
+            {blogPosts.map((post) => (
               <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-electric-blue text-white font-semibold hover:bg-electric-blue-600 transition-all"
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="block glass rounded-2xl p-8 hover:shadow-xl transition-all duration-300 group"
               >
-                Get Notified
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link
-                href="/"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-xl border-2 border-gray-300 dark:border-navy-700 text-navy dark:text-white font-semibold hover:border-electric-blue dark:hover:border-electric-blue transition-all"
-              >
-                Back to Home
-              </Link>
-            </div>
-          </div>
-
-          {/* Placeholder for future topics */}
-          <div className="mt-16">
-            <h3 className="text-2xl font-bold mb-8 text-navy dark:text-white text-center">
-              Upcoming Topics
-            </h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              {[
-                'Building Persistent Intelligence Systems',
-                'AI for Legal Tech: Opportunities and Challenges',
-                'How Founders Can Leverage AI Effectively',
-                'The Future of Context-Aware AI',
-                'Automating Founder Workflows',
-                'Ethics in AI-Powered Business Tools',
-              ].map((topic) => (
-                <div key={topic} className="p-6 rounded-xl border border-gray-200 dark:border-navy-700 bg-white dark:bg-navy-900">
-                  <p className="text-gray-700 dark:text-gray-300 font-medium">{topic}</p>
+                <div className="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400 mb-4">
+                  <div className="flex items-center space-x-2">
+                    <Calendar className="w-4 h-4" />
+                    <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <User className="w-4 h-4" />
+                    <span>{post.author}</span>
+                  </div>
                 </div>
-              ))}
-            </div>
+                
+                <h2 className="text-3xl font-bold mb-4 text-navy dark:text-white group-hover:text-electric-blue dark:group-hover:text-electric-blue transition-colors">
+                  {post.title}
+                </h2>
+                
+                <p className="text-lg text-gray-600 dark:text-gray-400 mb-4">
+                  {post.excerpt}
+                </p>
+                
+                <div className="flex items-center text-electric-blue font-medium group-hover:translate-x-1 transition-transform">
+                  <span>Read more</span>
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

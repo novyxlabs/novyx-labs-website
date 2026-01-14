@@ -4,16 +4,17 @@ import './globals.css'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { ThemeProvider } from '@/components/ThemeProvider'
+import { Analytics } from '@/components/Analytics'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
-    default: 'Novyx Labs - AI Innovation Hub for Founders',
+    default: 'Novyx Labs - Persistent AI for Knowledge Graphs',
     template: '%s | Novyx Labs'
   },
-  description: 'Empowering builders with AI intelligence across every vertical. From persistent intelligence to vertical-specific automation for modern founders.',
-  keywords: ['AI for founders', 'persistent intelligence', 'AI automation', 'startup tools', 'legal tech AI', 'Novyx Core', 'founder tools', 'AI solutions'],
+  description: 'Persistent AI brain for enduring knowledge graphs. Core powers multi-tenant, versioned, federated knowledge storage for AI applications.',
+  keywords: ['persistent AI', 'knowledge graphs', 'AI memory', 'persistent memory', 'knowledge graph database', 'Novyx Core', 'AI infrastructure', 'federated AI', 'multi-tenant AI', 'AI versioning'],
   authors: [{ name: 'Novyx Labs', url: 'https://novyxlabs.com' }],
   creator: 'Novyx Labs',
   publisher: 'Novyx Labs',
@@ -22,8 +23,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://novyx-labs-website.vercel.app',
-    title: 'Novyx Labs - AI Innovation Hub for Founders',
-    description: 'Empowering builders with AI intelligence across every vertical',
+    title: 'Novyx Labs - Persistent AI for Knowledge Graphs',
+    description: 'Core powers persistent memory for AI applications with multi-tenant architecture',
     siteName: 'Novyx Labs',
     images: [
       {
@@ -36,8 +37,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Novyx Labs - AI Innovation Hub for Founders',
-    description: 'Empowering builders with AI intelligence across every vertical',
+    title: 'Novyx Labs - Persistent AI for Knowledge Graphs',
+    description: 'Core powers persistent memory for AI applications',
     images: ['/og-image.png'],
   },
   robots: {
@@ -65,6 +66,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider>
+          <Analytics />
           <div className="flex flex-col min-h-screen">
             <Header />
             <main className="flex-grow">

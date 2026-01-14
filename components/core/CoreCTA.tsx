@@ -6,10 +6,10 @@ import Link from 'next/link'
 
 const benefits = [
   'Full access to Core API and documentation',
-  'Join the builder community on GitHub',
-  'Shape the roadmap with your feedback',
-  'Your data stays private and encrypted',
-  'Free during open beta',
+  'Federation and Dashboard extensions included',
+  'Multi-tenant architecture out of the box',
+  'Enterprise-grade security and compliance',
+  'Direct support from the Core team',
 ]
 
 export function CoreCTA() {
@@ -22,11 +22,11 @@ export function CoreCTA() {
         {/* Header */}
         <div className="mb-12">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-            Start Building Today
+            Deploy Core Today
           </h2>
           <p className="text-xl text-white/80 max-w-3xl mx-auto">
-            Novyx Core is in open beta. Check out the code on GitHub and start building
-            with persistent AI that actually remembers.
+            Novyx Core is live and production-ready. Get started with persistent AI that powers
+            your knowledge graphs, with Federation and Dashboard extensions available now.
           </p>
         </div>
 
@@ -62,7 +62,7 @@ export function CoreCTA() {
 
         {/* Footer Note */}
         <p className="mt-8 text-white/80 text-sm">
-          Open beta • Building in public • Documentation available on GitHub
+          Production-ready • Full documentation • Enterprise support available
         </p>
       </div>
     </section>

@@ -16,11 +16,11 @@ export function CoreHero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="animate-slide-up">
-            {/* Badge */}
-            <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-semibold mb-6">
-              <Brain className="w-4 h-4" />
-              <span>Flagship Product</span>
-            </div>
+          {/* Badge */}
+          <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-green-500/20 backdrop-blur-sm border border-green-400/40 text-green-100 text-sm font-semibold mb-6">
+            <Brain className="w-4 h-4" />
+            <span>Live Flagship</span>
+          </div>
 
             {/* Headline */}
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
@@ -41,19 +41,19 @@ export function CoreHero() {
             <div className="grid grid-cols-2 gap-4 mb-8">
               <div className="flex items-center space-x-2">
                 <Zap className="w-5 h-5 text-electric-blue-300" />
-                <span className="text-white/90">Infinite Memory</span>
+                <span className="text-white/90">Persistent Memory</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Zap className="w-5 h-5 text-electric-blue-300" />
-                <span className="text-white/90">Cross-Session Learning</span>
+                <span className="text-white/90">Multi-Tenant</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Zap className="w-5 h-5 text-electric-blue-300" />
-                <span className="text-white/90">Adaptive Intelligence</span>
+                <span className="text-white/90">Versioning</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Zap className="w-5 h-5 text-electric-blue-300" />
-                <span className="text-white/90">Multi-Vertical</span>
+                <span className="text-white/90">Federation Ready</span>
               </div>
             </div>
 
