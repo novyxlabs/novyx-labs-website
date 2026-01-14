@@ -1,33 +1,22 @@
 import { Metadata } from 'next'
-import { EnterpriseHero } from '@/components/home/EnterpriseHero'
-import { EnterpriseCapabilities } from '@/components/home/EnterpriseCapabilities'
-import { GovernanceArchitecture } from '@/components/home/GovernanceArchitecture'
-import { Pricing } from '@/components/Pricing'
-import { CTA } from '@/components/home/CTA'
+import { InfraHero } from '@/components/home/InfraHero'
+import { ProblemSolution } from '@/components/home/ProblemSolution'
+import { ProductGrid } from '@/components/home/ProductGrid'
+import { InfraFooter } from '@/components/home/InfraFooter'
 
 export const metadata: Metadata = {
-  title: 'Novyx Labs - Fix AI Forgetfulness with Persistent Knowledge Graphs',
-  description: 'Open-source knowledge graph with secure data linking, self-healing architecture, and multi-tenant isolation. Start free, scale to managed hosting, or deploy enterprise governance.',
-  keywords: ['knowledge graph', 'persistent AI', 'self-healing', 'multi-tenant', 'data sovereignty', 'enterprise governance', 'federated intelligence'],
-  openGraph: {
-    title: 'Novyx Labs - Fix AI Forgetfulness',
-    description: 'Persistent knowledge graphs that never forget. Open source to enterprise.',
-  },
+  title: 'Novyx Labs - Building the persistence layer for autonomous AI',
+  description: 'Infrastructure for AI agents that remember. Cryptographically durable memory, integrity verification, and context preservation for autonomous systems.',
+  keywords: ['AI agent memory', 'memory persistence', 'AI infrastructure', 'memory poisoning', 'cryptographic verification', 'agent persistence', 'durable AI', 'knowledge graph'],
 }
 
 export default function Home() {
   return (
     <>
-      <EnterpriseHero />
-      <EnterpriseCapabilities />
-      <GovernanceArchitecture />
-      <Pricing />
-      <CTA />
+      <InfraHero />
+      <ProblemSolution />
+      <ProductGrid />
+      <InfraFooter />
     </>
   )
 }
-
-
-
-
-
