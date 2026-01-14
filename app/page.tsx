@@ -1,26 +1,25 @@
 import { Metadata } from 'next'
-import { Hero } from '@/components/home/Hero'
-import { WhoWeAre } from '@/components/home/WhoWeAre'
-import { Ecosystem } from '@/components/home/Ecosystem'
-import { Capabilities } from '@/components/home/Capabilities'
+import { EnterpriseHero } from '@/components/home/EnterpriseHero'
+import { EnterpriseCapabilities } from '@/components/home/EnterpriseCapabilities'
+import { GovernanceArchitecture } from '@/components/home/GovernanceArchitecture'
 import { CTA } from '@/components/home/CTA'
 
 export const metadata: Metadata = {
-  title: 'Novyx Labs - AI for Builders',
-  description: 'We build persistent AI systems that remember. Starting with Novyx Core—a knowledge graph that endures across conversations.',
+  title: 'Novyx Labs - Automated Trust for the Federated Enterprise',
+  description: 'Enterprise governance and federated intelligence with cryptographic integrity, multi-tenant sovereignty, and sub-10ms MTTR. SOC 2, ISO 27001, GDPR compliant.',
+  keywords: ['enterprise governance', 'federated intelligence', 'cryptographic integrity', 'HMAC-SHA256', 'multi-tenant', 'data sovereignty', 'compliance', 'zero-knowledge', 'knowledge graph'],
   openGraph: {
-    title: 'Novyx Labs - AI for Builders',
-    description: 'Building AI that actually remembers',
+    title: 'Novyx Labs - Automated Trust for the Federated Enterprise',
+    description: 'Cryptographic integrity and data sovereignty for regulated enterprises',
   },
 }
 
 export default function Home() {
   return (
     <>
-      <Hero />
-      <WhoWeAre />
-      <Ecosystem />
-      <Capabilities />
+      <EnterpriseHero />
+      <EnterpriseCapabilities />
+      <GovernanceArchitecture />
       <CTA />
     </>
   )

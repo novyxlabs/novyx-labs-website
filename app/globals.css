@@ -5,16 +5,17 @@
 @tailwind utilities;
 
 :root {
-  --navy: 26, 32, 44; /* #1A202C */
-  --electric-blue: 49, 130, 206; /* #3182CE */
+  --midnight: 15, 23, 42; /* #0F172A - Slate 900 */
+  --slate: 30, 41, 59; /* #1E293B - Slate 800 */
+  --accent: 56, 189, 248; /* #38BDF8 - Sky 400 */
   --border: 214.3 31.8% 91.4%;
   --background: 0 0% 100%;
-  --foreground: 26 32 44;
+  --foreground: 15 23 42;
 }
 
 .dark {
-  --border: 217.2 32.6% 17.5%;
-  --background: 26 32 44;
+  --border: 30 41 59;
+  --background: 15 23 42;
   --foreground: 248 250 252;
 }
 
@@ -44,21 +45,21 @@ body {
   @apply bg-electric-blue dark:bg-electric-blue;
 }
 
-/* AI-themed gradient text */
+/* Enterprise gradient text */
 .gradient-text {
-  @apply bg-gradient-to-r from-electric-blue via-blue-400 to-electric-blue bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-accent via-cyan-400 to-accent bg-clip-text text-transparent;
   background-size: 200% auto;
   animation: gradient-shift 3s ease infinite;
 }
 
-/* AI-themed gradient background */
+/* Enterprise gradient background */
 .gradient-bg {
-  @apply bg-gradient-to-br from-navy to-electric-blue;
+  @apply bg-gradient-to-br from-midnight to-slate;
 }
 
-/* Navy to Blue gradient */
-.gradient-navy-blue {
-  @apply bg-gradient-to-br from-navy via-navy-800 to-electric-blue;
+/* Midnight Enterprise gradient */
+.gradient-midnight {
+  @apply bg-gradient-to-br from-midnight via-slate to-midnight;
 }
 
 /* Glass morphism effect */

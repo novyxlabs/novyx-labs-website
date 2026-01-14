@@ -8,10 +8,9 @@ import { useTheme } from './ThemeProvider'
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'Core Tech', href: '/core' },
-  { name: 'Solutions', href: '/solutions' },
-  { name: 'Ecosystem', href: '/ecosystem' },
-  { name: 'Blog', href: '/blog' },
+  { name: 'Open Core', href: '/core' },
+  { name: 'Enterprise Platform', href: '/enterprise' },
+  { name: 'Intelligence', href: '/intelligence' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
 ]
