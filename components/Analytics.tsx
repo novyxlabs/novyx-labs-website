@@ -1,19 +1,18 @@
 'use client'
 
 import { useEffect } from 'react'
-import { usePathname, useSearchParams } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 
 // Analytics tracking for conversion events
 export function Analytics() {
   const pathname = usePathname()
-  const searchParams = useSearchParams()
 
   useEffect(() => {
     if (pathname) {
       // Track page views
       trackPageView(pathname)
     }
-  }, [pathname, searchParams])
+  }, [pathname])
 
   return null
 }

@@ -85,24 +85,38 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               prose-a:text-electric-blue hover:prose-a:text-electric-blue-600
               prose-code:text-electric-blue prose-code:bg-gray-100 dark:prose-code:bg-navy-800 prose-code:px-1 prose-code:py-0.5 prose-code:rounded
               prose-pre:bg-navy-900 prose-pre:text-white"
-            dangerouslySetInnerHTML={{ __html: post.content.split('\n').map(line => {
-              if (line.startsWith('# ')) return `<h1>${line.slice(2)}</h1>`
-              if (line.startsWith('## ')) return `<h2>${line.slice(3)}</h2>`
-              if (line.startsWith('### ')) return `<h3>${line.slice(4)}</h3>`
-              if (line.startsWith('#### ')) return `<h4>${line.slice(5)}</h4>`
-              if (line.startsWith('```')) {
-                const lang = line.slice(3)
-                return `<pre><code class="language-${lang}">`
+          >
+            {post.content.split('\n\n').map((paragraph, idx) => {
+              if (paragraph.startsWith('# ')) {
+                return <h1 key={idx}>{paragraph.slice(2)}</h1>
               }
-              if (line === '```') return `</code></pre>`
-              if (line.startsWith('- ')) return `<li>${line.slice(2)}</li>`
-              if (line.startsWith('*') && line.endsWith('*')) return `<p><em>${line.slice(1, -1)}</em></p>`
-              if (line.startsWith('**') && line.endsWith('**')) return `<p><strong>${line.slice(2, -2)}</strong></p>`
-              if (line === '---') return '<hr />'
-              if (line.trim() === '') return '<br />'
-              return `<p>${line}</p>`
-            }).join('\n') }}
-          />
+              if (paragraph.startsWith('## ')) {
+                return <h2 key={idx}>{paragraph.slice(3)}</h2>
+              }
+              if (paragraph.startsWith('### ')) {
+                return <h3 key={idx}>{paragraph.slice(4)}</h3>
+              }
+              if (paragraph.startsWith('```')) {
+                const lines = paragraph.split('\n')
+                const code = lines.slice(1, -1).join('\n')
+                return <pre key={idx}><code>{code}</code></pre>
+              }
+              if (paragraph.startsWith('- ')) {
+                const items = paragraph.split('\n')
+                return (
+                  <ul key={idx}>
+                    {items.map((item, i) => (
+                      <li key={i}>{item.slice(2)}</li>
+                    ))}
+                  </ul>
+                )
+              }
+              if (paragraph === '---') {
+                return <hr key={idx} />
+              }
+              return <p key={idx}>{paragraph}</p>
+            })}
+          </div>
         </div>
       </article>
 
