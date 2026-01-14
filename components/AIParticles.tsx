@@ -27,10 +27,14 @@ export function AIParticles() {
       vx: number
       vy: number
       radius: number
+      canvasWidth: number
+      canvasHeight: number
 
-      constructor() {
-        this.x = Math.random() * canvas.width
-        this.y = Math.random() * canvas.height
+      constructor(width: number, height: number) {
+        this.canvasWidth = width
+        this.canvasHeight = height
+        this.x = Math.random() * width
+        this.y = Math.random() * height
         this.vx = (Math.random() - 0.5) * 0.5
         this.vy = (Math.random() - 0.5) * 0.5
         this.radius = Math.random() * 2
@@ -40,16 +44,15 @@ export function AIParticles() {
         this.x += this.vx
         this.y += this.vy
 
-        if (this.x < 0 || this.x > canvas.width) this.vx *= -1
-        if (this.y < 0 || this.y > canvas.height) this.vy *= -1
+        if (this.x < 0 || this.x > this.canvasWidth) this.vx *= -1
+        if (this.y < 0 || this.y > this.canvasHeight) this.vy *= -1
       }
 
-      draw() {
-        if (!ctx) return
-        ctx.beginPath()
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
-        ctx.fillStyle = 'rgba(49, 130, 206, 0.3)'
-        ctx.fill()
+      draw(context: CanvasRenderingContext2D) {
+        context.beginPath()
+        context.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
+        context.fillStyle = 'rgba(49, 130, 206, 0.3)'
+        context.fill()
       }
     }
 
@@ -57,16 +60,18 @@ export function AIParticles() {
     const particleCount = 50
 
     for (let i = 0; i < particleCount; i++) {
-      particles.push(new Particle())
+      particles.push(new Particle(canvas.width, canvas.height))
     }
 
     const animate = () => {
+      if (!ctx || !canvas) return
+      
       ctx.clearRect(0, 0, canvas.width, canvas.height)
 
       // Update and draw particles
       particles.forEach(particle => {
         particle.update()
-        particle.draw()
+        particle.draw(ctx)
       })
 
       // Draw connections
@@ -76,7 +81,7 @@ export function AIParticles() {
           const dy = p1.y - p2.y
           const distance = Math.sqrt(dx * dx + dy * dy)
 
-          if (distance < 150) {
+          if (distance < 150 && ctx) {
             ctx.beginPath()
             ctx.strokeStyle = `rgba(49, 130, 206, ${0.2 * (1 - distance / 150)})`
             ctx.lineWidth = 0.5
