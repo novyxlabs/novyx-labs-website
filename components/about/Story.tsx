@@ -6,17 +6,17 @@ const milestones = [
   {
     icon: Lightbulb,
     title: 'The Problem',
-    description: 'Founders face countless repetitive challenges across every vertical—legal, compliance, operations, and more. Traditional tools don\'t learn or adapt, forcing entrepreneurs to context-switch constantly.',
+    description: 'AI that forgets everything the moment you close the chat. Builders waste time repeating context, re-explaining their needs, and manually connecting information.',
   },
   {
     icon: Code,
     title: 'The Solution',
-    description: 'We\'re building AI that actually remembers and evolves. Starting with Novyx Core\'s persistent intelligence and expanding into vertical-specific automation, we create tools that get smarter with use.',
+    description: 'Novyx Core—a persistent AI brain that remembers everything. Build knowledge graphs that endure, connect automatically, and learn continuously. Three lines of code to get started.',
   },
   {
     icon: Rocket,
     title: 'The Future',
-    description: 'An entire ecosystem of AI-powered solutions for every founder challenge. From legal automation to persistent intelligence, we\'re creating the AI infrastructure that modern builders need to thrive.',
+    description: 'Building the infrastructure for persistent AI. Federation for distributed systems, enterprise dashboards for scale, and more. The AI layer that modern developers need.',
   },
 ]
 
@@ -29,7 +29,7 @@ export function Story() {
             Our <span className="gradient-text">Story</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            From founder frustrations to AI innovation—building the intelligence layer modern builders deserve
+            Building persistent AI infrastructure, one piece at a time
           </p>
         </div>
 
@@ -57,12 +57,10 @@ export function Story() {
         <div className="mt-20 max-w-3xl mx-auto">
           <div className="glass rounded-2xl p-8 sm:p-12">
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              Novyx Labs is an AI innovation hub built by founders, for founders. We're not just
-              building tools—we're creating intelligent systems that learn, adapt, and evolve with you.
-              Our approach: identify the challenges that slow builders down, develop AI solutions that
-              eliminate friction, and make them accessible to every founder who needs them. From persistent
-              intelligence to vertical-specific automation, we're building the AI ecosystem that the next
-              generation of companies will run on.
+              Novyx Labs builds persistent AI infrastructure for developers. We're starting with Core—
+              a knowledge graph system that actually remembers across conversations. No more repeating
+              context. No more forgotten history. Just AI that learns and grows with you. We build in
+              public on GitHub, keep your data private, and focus on simple APIs that get out of your way.
             </p>
           </div>
         </div>

@@ -35,27 +35,27 @@ const liveProjects = [
 const upcomingProjects = [
   {
     icon: <Shield className="w-6 h-6 text-white" />,
-    title: 'Compliance Hub',
-    description: 'Automated compliance tracking, regulatory monitoring, and deadline management for startups.',
+    title: 'Federation Sync',
+    description: 'Sync knowledge graphs across distributed AI systems. Multi-model collaboration with shared persistent memory.',
     badge: 'Q2 2026',
     badgeColor: 'bg-gray-500',
   },
   {
     icon: <Sparkles className="w-6 h-6 text-white" />,
-    title: 'Finance Automation',
-    description: 'AI-powered bookkeeping, expense tracking, and financial forecasting tailored for early-stage companies.',
+    title: 'Enterprise Dashboard',
+    description: 'Monitor and manage AI knowledge graphs at scale. Analytics, insights, and control for production deployments.',
     badge: 'Q3 2026',
     badgeColor: 'bg-gray-500',
   },
 ]
 
 const exploringVerticals = [
-  'HR & Talent Management',
-  'Operations & Workflow Automation',
-  'Sales Intelligence & CRM',
-  'Product Development & Roadmapping',
-  'Customer Support & Success',
-  'Marketing & Content Generation',
+  'Multi-Region Deployments',
+  'Advanced Query Optimization',
+  'Knowledge Graph Visualization',
+  'Team Collaboration Tools',
+  'Enterprise SSO & Auth',
+  'Compliance & Audit Logs',
 ]
 
 export default function EcosystemPage() {
@@ -70,11 +70,11 @@ export default function EcosystemPage() {
             <span>Full Ecosystem</span>
           </div>
           <h1 className="text-5xl sm:text-6xl font-bold mb-6">
-            AI Solutions for Every Challenge
+            Building the AI Infrastructure for Builders
           </h1>
           <p className="text-xl text-white/80 max-w-3xl mx-auto">
-            From persistent intelligence to vertical-specific automation, we're building
-            a comprehensive ecosystem of tools that modern founders actually need.
+            Starting with Novyx Core. Adding federation, monitoring, and more.
+            Building the persistent AI layer that modern developers need.
           </p>
         </div>
       </section>
@@ -84,10 +84,10 @@ export default function EcosystemPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4 text-navy dark:text-white">
-              Live Now
+              Active Development
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400">
-              Production-ready solutions you can start using today
+              Core is in open beta—check it out on GitHub
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -147,19 +147,21 @@ export default function EcosystemPage() {
       <section className="px-4 sm:px-6 lg:px-8 py-24 bg-gradient-to-br from-navy to-electric-blue text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">
-            Help Us Build for You
+            Building in Public
           </h2>
           <p className="text-xl text-white/80 mb-8">
-            We're founder-first. Tell us what challenges you're facing and we'll explore
-            building AI solutions specifically for your needs.
+            Follow along on GitHub. Share feedback, request features, or contribute.
+            We're building Core in the open.
           </p>
-          <Link
-            href="/contact"
+          <a
+            href="https://github.com/novyxlabs"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center px-8 py-4 rounded-xl bg-white text-navy font-semibold hover:bg-white/90 transition-all"
           >
-            Share Your Challenges
+            View on GitHub
             <Plus className="ml-2 w-5 h-5" />
-          </Link>
+          </a>
         </div>
       </section>
     </div>

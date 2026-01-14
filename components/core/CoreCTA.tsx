@@ -5,11 +5,11 @@ import { Button } from '@/components/Button'
 import Link from 'next/link'
 
 const benefits = [
-  'Priority access to Novyx Core beta',
-  'Dedicated onboarding and training',
-  'Direct line to the founding team',
-  'Influence product roadmap',
-  'Founding user pricing (locked in forever)',
+  'Full access to Core API and documentation',
+  'Join the builder community on GitHub',
+  'Shape the roadmap with your feedback',
+  'Your data stays private and encrypted',
+  'Free during open beta',
 ]
 
 export function CoreCTA() {
@@ -22,17 +22,17 @@ export function CoreCTA() {
         {/* Header */}
         <div className="mb-12">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-            Join the Future of AI Intelligence
+            Start Building Today
           </h2>
           <p className="text-xl text-white/80 max-w-3xl mx-auto">
-            Novyx Core is currently in private beta. Apply for early access and be among
-            the first builders to experience truly persistent AI.
+            Novyx Core is in open beta. Check out the code on GitHub and start building
+            with persistent AI that actually remembers.
           </p>
         </div>
 
         {/* Benefits */}
         <div className="glass rounded-2xl p-8 mb-8 backdrop-blur-xl bg-white/10 border border-white/20">
-          <h3 className="text-2xl font-bold mb-6">Early Access Includes:</h3>
+          <h3 className="text-2xl font-bold mb-6">What You Get:</h3>
           <ul className="space-y-4 text-left max-w-2xl mx-auto">
             {benefits.map((benefit) => (
               <li key={benefit} className="flex items-center space-x-3">
@@ -47,22 +47,22 @@ export function CoreCTA() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/contact?product=core">
+          <a href="https://github.com/novyxlabs" target="_blank" rel="noopener noreferrer">
             <Button size="lg" className="bg-white text-navy hover:bg-white/90">
-              Request Early Access
+              View on GitHub
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-          </Link>
-          <Link href="/ecosystem">
+          </a>
+          <Link href="/contact">
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-              Explore Other Solutions
+              Get in Touch
             </Button>
           </Link>
         </div>
 
         {/* Footer Note */}
-        <p className="mt-8 text-white/60 text-sm">
-          Limited spots available. We're onboarding users in small batches to ensure quality.
+        <p className="mt-8 text-white/80 text-sm">
+          Open beta • Building in public • Documentation available on GitHub
         </p>
       </div>
     </section>

@@ -5,33 +5,33 @@ import { Database, Cpu, Network, RefreshCw, Lock, Zap } from 'lucide-react'
 const capabilities = [
   {
     icon: Database,
-    title: 'Persistent Memory',
-    description: 'AI that remembers context across all interactions, learning your preferences and workflows over time.',
-  },
-  {
-    icon: Cpu,
-    title: 'Intelligent Automation',
-    description: 'Automate complex tasks with AI that understands context, nuance, and your specific business needs.',
+    title: 'Store Once, Remember Forever',
+    description: 'Tell Core something once. It builds a knowledge graph that persists across all conversations.',
   },
   {
     icon: Network,
-    title: 'Cross-Platform Integration',
-    description: 'Seamlessly connect with your existing tools and workflows for a unified AI experience.',
+    title: 'Connects Automatically',
+    description: 'Core links related information without you asking. Your knowledge graph grows intelligently.',
   },
   {
     icon: RefreshCw,
-    title: 'Continuous Learning',
-    description: 'Our AI systems improve with every interaction, becoming more valuable as you use them.',
-  },
-  {
-    icon: Lock,
-    title: 'Enterprise Security',
-    description: 'Bank-level encryption and security protocols to keep your data safe and compliant.',
+    title: 'Learns as You Go',
+    description: 'Every conversation makes your AI smarter. No training needed—just talk naturally.',
   },
   {
     icon: Zap,
-    title: 'Lightning Fast',
-    description: 'Optimized infrastructure ensures rapid responses without sacrificing accuracy or quality.',
+    title: 'Fast Queries',
+    description: 'Sub-second responses even with thousands of stored facts. Optimized for speed.',
+  },
+  {
+    icon: Lock,
+    title: 'Your Data Stays Yours',
+    description: 'We never train on your data. Everything encrypted. You own your knowledge graph.',
+  },
+  {
+    icon: Cpu,
+    title: 'Simple API',
+    description: 'Three lines of code to get started. Built for developers who value simplicity.',
   },
 ]
 
@@ -42,12 +42,11 @@ export function Capabilities() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-navy dark:text-white">
-            Built for
-            <span className="gradient-text"> Modern Builders</span>
+            How
+            <span className="gradient-text"> Core Works</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Enterprise-grade AI capabilities designed specifically for founders
-            who need to move fast without compromising on quality.
+            Simple to use, powerful under the hood. AI that remembers without the complexity.
           </p>
         </div>
 

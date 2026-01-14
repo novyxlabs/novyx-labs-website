@@ -4,11 +4,11 @@ import { Values } from '@/components/about/Values'
 import { Contact } from '@/components/about/Contact'
 
 export const metadata = {
-  title: 'About - AI Innovation Hub for Founders | Novyx Labs',
-  description: 'Learn about Novyx Labs and our mission to empower founders with AI intelligence across every vertical.',
+  title: 'About - Building AI That Remembers | Novyx Labs',
+  description: 'We build persistent AI systems that actually remember. Starting with Novyx Core—a knowledge graph that endures.',
   openGraph: {
-    title: 'About Novyx Labs - AI Innovation Hub',
-    description: 'Empowering founders with AI intelligence across every vertical',
+    title: 'About Novyx Labs - Building AI That Remembers',
+    description: 'Building persistent AI systems for developers',
     type: 'website',
   },
 }

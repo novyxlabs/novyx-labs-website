@@ -8,34 +8,34 @@ const ecosystemItems = [
   {
     icon: <Brain className="w-6 h-6 text-white" />,
     title: 'Novyx Core',
-    description: 'Advanced persistent intelligence system that learns and adapts across all interactions.',
-    badge: 'Flagship',
+    description: 'A persistent AI brain for knowledge graphs that endure. Remember everything, connect automatically.',
+    badge: 'Active',
     badgeColor: 'bg-electric-blue',
     href: '/core',
   },
   {
     icon: <Scale className="w-6 h-6 text-white" />,
-    title: 'Legal Generator',
-    description: 'AI-powered legal document generation for NDAs, contracts, and compliance documents.',
-    badge: 'Live',
-    badgeColor: 'bg-green-500',
-    href: '/solutions#legal',
+    title: 'Federation Sync',
+    description: 'Sync knowledge graphs across distributed AI systems. Multi-model collaboration with shared memory.',
+    badge: 'Q2 2026',
+    badgeColor: 'bg-gray-500',
+    href: '/solutions#federation',
   },
   {
     icon: <Shield className="w-6 h-6 text-white" />,
-    title: 'Compliance Hub',
-    description: 'Automated compliance tracking and regulatory monitoring for growing startups.',
-    badge: 'Q2 2026',
+    title: 'Enterprise Dashboard',
+    description: 'Monitor and manage AI knowledge graphs at scale. Analytics, insights, and control.',
+    badge: 'Q3 2026',
     badgeColor: 'bg-gray-500',
-    href: '/solutions#compliance',
+    href: '/solutions#dashboard',
   },
   {
     icon: <Zap className="w-6 h-6 text-white" />,
-    title: 'Future Verticals',
-    description: 'Exploring AI automation for finance, HR, operations, and more founder challenges.',
-    badge: 'Coming',
+    title: 'What's Next?',
+    description: 'We're exploring more AI infrastructure for builders. Share your ideas on GitHub.',
+    badge: 'You Tell Us',
     badgeColor: 'bg-gray-500',
-    href: '/ecosystem',
+    href: 'https://github.com/novyxlabs',
   },
 ]
 
@@ -53,12 +53,11 @@ export function Ecosystem() {
             <span>Our AI Ecosystem</span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-navy dark:text-white">
-            Intelligence Across Every
-            <span className="gradient-text"> Vertical</span>
+            What We're
+            <span className="gradient-text"> Building</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            From legal automation to persistent AI assistance, we're building the tools
-            that modern founders need to move faster and build better.
+            Starting with Core. Building the infrastructure for persistent AI that actually remembers.
           </p>
         </div>
 

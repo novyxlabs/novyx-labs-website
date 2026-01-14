@@ -27,14 +27,14 @@ export function CoreHero() {
               Novyx Core
             </h1>
             <p className="text-2xl sm:text-3xl font-semibold mb-6 text-electric-blue-200">
-              Persistent Intelligence That Never Forgets
+              A Persistent AI Brain for Knowledge Graphs That Endure
             </p>
 
             {/* Description */}
             <p className="text-xl text-white/80 mb-8 leading-relaxed">
-              The world's most advanced persistent AI system. Novyx Core learns from every
-              interaction, maintains context across sessions, and adapts to your unique
-              workflows—becoming more valuable with every use.
+              Novyx Core remembers everything. Build knowledge graphs that persist across
+              conversations, learn from every interaction, and grow smarter over time.
+              Your AI that actually keeps context.
             </p>
 
             {/* Key Features */}
@@ -59,17 +59,17 @@ export function CoreHero() {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact">
+              <a href="https://github.com/novyxlabs" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-white text-navy hover:bg-white/90">
-                  Request Early Access
+                  View on GitHub
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
-              </Link>
+              </a>
               <button
-                onClick={() => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('code')?.scrollIntoView({ behavior: 'smooth' })}
                 className="px-8 py-4 rounded-xl border-2 border-white/30 hover:border-white/50 font-semibold transition-all duration-300"
               >
-                See Demo
+                See Code Examples
               </button>
             </div>
           </div>
