@@ -53,6 +53,7 @@ const config: Config = {
           800: '#075985',
           900: '#0C4A6E',
         },
+        'accent-dark': '#0EA5E9',
       },
       fontFamily: {
         sans: ['DM Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
