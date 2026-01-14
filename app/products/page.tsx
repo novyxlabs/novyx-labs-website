@@ -121,6 +121,7 @@ export default function ProductsPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product) => {
               const colors = statusColors[product.status]
+              const Icon = product.icon
               return (
                 <Link
                   key={product.name}
@@ -138,7 +139,7 @@ export default function ProductsPage() {
 
                   {/* Icon */}
                   <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 border ${colors.icon}`}>
-                    <product.icon className="w-7 h-7" />
+                    <Icon className="w-7 h-7" />
                   </div>
 
                   {/* Content */}
