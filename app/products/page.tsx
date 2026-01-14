@@ -15,7 +15,7 @@ const products = [
     description: 'Cryptographically durable knowledge graph for AI agents. SHA-256 integrity. JSON-LD semantic search. Open-core foundation for agent memory.',
     status: 'live' as const,
     href: '/products/core',
-    icon: Database,
+    iconName: 'Database',
     metrics: ['516 artifacts verified', 'SHA-256 signed', 'MIT licensed'],
     features: ['Semantic search', 'Version control', 'Multi-tenant ready', 'JSON-LD compliance'],
   },
@@ -25,7 +25,7 @@ const products = [
     description: 'Security infrastructure for mission-critical AI agents. Real-time poisoning detection. Compliance-ready audit trails for SOC 2, GDPR, HIPAA.',
     status: 'beta' as const,
     href: '/products/integrity',
-    icon: Shield,
+    iconName: 'Shield',
     metrics: ['<1ms detection', '100% coverage', 'SOC 2 ready'],
     features: ['Poisoning detection', 'Auto-rollback', 'Compliance reports', 'Forensic timeline'],
   },
@@ -35,7 +35,7 @@ const products = [
     description: 'Intelligent summarization of agent memory. Keep context under token limits while preserving critical information. Lossless knowledge distillation.',
     status: 'coming' as const,
     href: '/products',
-    icon: Zap,
+    iconName: 'Zap',
     metrics: ['Q2 2025', '90% compression', 'Zero information loss'],
     features: ['Token optimization', 'Hierarchical storage', 'Selective recall', 'Cost reduction'],
   },
@@ -45,7 +45,7 @@ const products = [
     description: 'Sync agent memory across distributed systems. Cryptographic consistency proofs. Multi-region deployment. Built for agent swarms.',
     status: 'coming' as const,
     href: '/products',
-    icon: Network,
+    iconName: 'Network',
     metrics: ['Q3 2025', 'Multi-region', 'Cryptographic sync'],
     features: ['Cross-region sync', 'Eventual consistency', 'Conflict resolution', 'Byzantine fault tolerance'],
   },
@@ -55,7 +55,7 @@ const products = [
     description: 'Dashboards for memory growth, query patterns, integrity metrics. Debug agent behavior. Optimize knowledge retrieval. Production monitoring.',
     status: 'coming' as const,
     href: '/products',
-    icon: FileCode,
+    iconName: 'FileCode',
     metrics: ['Q4 2025', 'Real-time metrics', 'Grafana integration'],
     features: ['Query analytics', 'Growth tracking', 'Anomaly detection', 'Performance profiling'],
   },
@@ -65,11 +65,20 @@ const products = [
     description: 'We're building the persistence layer for autonomous AI. If you're solving hard problems in agent memory, we want to hear from you.',
     status: 'future' as const,
     href: 'https://github.com/novyxlabs/ideas',
-    icon: Sparkles,
+    iconName: 'Sparkles',
     metrics: ['Open roadmap', 'Community-driven', 'Builder-focused'],
     features: ['Share on GitHub', 'Join discussions', 'Influence roadmap', 'Early access'],
   },
 ]
+
+const iconMap = {
+  Database,
+  Shield,
+  Zap,
+  Network,
+  FileCode,
+  Sparkles,
+}
 
 const statusColors = {
   live: {
@@ -121,7 +130,7 @@ export default function ProductsPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product) => {
               const colors = statusColors[product.status]
-              const Icon = product.icon
+              const Icon = iconMap[product.iconName as keyof typeof iconMap]
               return (
                 <Link
                   key={product.name}
