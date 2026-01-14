@@ -388,4 +388,3 @@ const core = new NovyxCore({ apiKey: YOUR_KEY });
 `
   }
 ]
-`
