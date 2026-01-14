@@ -1,27 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --border: 215 28% 17%;
-  --background: 222 22% 10%;
-  --foreground: 210 40% 98%;
-}
-
-.dark {
-  --background: 222 22% 10%;
-  --foreground: 210 40% 98%;
-}
-
-* {
-  @apply border-border;
+  --void: 234 54% 10%;
+  --steel: 230 10% 60%;
+  --pulse: 210 73% 58%;
+  --border: 230 10% 20%;
+  --background: 234 54% 10%;
+  --foreground: 230 10% 90%;
 }
 
 body {
-  @apply bg-midnight-900 text-slate-50 transition-colors duration-300;
-  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  @apply bg-void text-steel-50 antialiased;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Infrastructure Design System */
+.mono-heading {
+  @apply font-mono font-bold tracking-tight;
+}
+
+.grid-pattern {
+  background-image:
+    linear-gradient(90deg, rgba(139, 146, 171, 0.03) 1px, transparent 1px),
+    linear-gradient(rgba(139, 146, 171, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
 }
 
 /* Custom scrollbar */
@@ -41,9 +47,9 @@ body {
   @apply bg-accent;
 }
 
-/* Enterprise gradient text */
+/* Gradient text */
 .gradient-text {
-  @apply bg-gradient-to-r from-accent via-cyan-400 to-accent bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-pulse-400 via-pulse-500 to-pulse-600 bg-clip-text text-transparent;
   background-size: 200% auto;
   animation: gradient-shift 3s ease infinite;
 }
