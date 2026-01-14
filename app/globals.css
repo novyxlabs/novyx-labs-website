@@ -36,15 +36,15 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-slate;
+  @apply bg-steel-800;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-slate-700 rounded-full;
+  @apply bg-steel-600 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-accent;
+  @apply bg-pulse;
 }
 
 /* Gradient text */
@@ -54,19 +54,18 @@ body {
   animation: gradient-shift 3s ease infinite;
 }
 
-/* Enterprise gradient background */
+/* Gradient backgrounds */
 .gradient-bg {
-  @apply bg-gradient-to-br from-midnight to-slate;
+  @apply bg-gradient-to-br from-void to-steel-800;
 }
 
-/* Midnight Enterprise gradient */
-.gradient-midnight {
-  @apply bg-gradient-to-br from-midnight via-slate to-midnight;
+.gradient-void {
+  @apply bg-gradient-to-br from-void via-steel-900 to-void;
 }
 
 /* Glass morphism effect */
 .glass {
-  @apply bg-slate-900/80 backdrop-blur-xl border border-slate-700;
+  @apply bg-void/80 backdrop-blur-xl border border-steel-700;
 }
 
 /* Neural network background pattern */
@@ -108,9 +107,9 @@ body {
 
 /* Tech tile styling */
 .tech-tile {
-  @apply relative overflow-hidden rounded-2xl border border-slate-700;
-  @apply bg-slate-900 p-6 transition-all duration-300;
-  @apply hover:border-accent hover:shadow-lg;
+  @apply relative overflow-hidden rounded-2xl border border-steel-700;
+  @apply bg-steel-900 p-6 transition-all duration-300;
+  @apply hover:border-pulse hover:shadow-lg;
 }
 
 /* Pulse animation for CTAs */
