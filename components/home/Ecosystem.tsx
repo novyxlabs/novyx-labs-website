@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const ecosystemItems = [
   {
-    icon: Brain,
+    icon: <Brain className="w-6 h-6 text-white" />,
     title: 'Novyx Core',
     description: 'Advanced persistent intelligence system that learns and adapts across all interactions.',
     badge: 'Flagship',
@@ -14,7 +14,7 @@ const ecosystemItems = [
     href: '/core',
   },
   {
-    icon: Scale,
+    icon: <Scale className="w-6 h-6 text-white" />,
     title: 'Legal Generator',
     description: 'AI-powered legal document generation for NDAs, contracts, and compliance documents.',
     badge: 'Live',
@@ -22,7 +22,7 @@ const ecosystemItems = [
     href: '/solutions#legal',
   },
   {
-    icon: Shield,
+    icon: <Shield className="w-6 h-6 text-white" />,
     title: 'Compliance Hub',
     description: 'Automated compliance tracking and regulatory monitoring for growing startups.',
     badge: 'Q2 2026',
@@ -30,7 +30,7 @@ const ecosystemItems = [
     href: '/solutions#compliance',
   },
   {
-    icon: Zap,
+    icon: <Zap className="w-6 h-6 text-white" />,
     title: 'Future Verticals',
     description: 'Exploring AI automation for finance, HR, operations, and more founder challenges.',
     badge: 'Coming',

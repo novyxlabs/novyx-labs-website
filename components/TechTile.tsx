@@ -1,10 +1,9 @@
 'use client'
 
-import { LucideIcon } from 'lucide-react'
 import { ReactNode } from 'react'
 
 interface TechTileProps {
-  icon: LucideIcon
+  icon: ReactNode
   title: string
   description: string
   badge?: string
@@ -14,7 +13,7 @@ interface TechTileProps {
 }
 
 export function TechTile({ 
-  icon: Icon, 
+  icon, 
   title, 
   description, 
   badge, 
@@ -34,7 +33,7 @@ export function TechTile({
       <div className="flex items-start justify-between mb-4">
         <div className="relative">
           <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-navy to-electric-blue flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-            <Icon className="w-6 h-6 text-white" />
+            {icon}
           </div>
           {/* Glow effect on hover */}
           <div className="absolute inset-0 rounded-xl bg-electric-blue opacity-0 group-hover:opacity-20 blur-lg transition-opacity duration-300" />

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 const liveProjects = [
   {
-    icon: Brain,
+    icon: <Brain className="w-6 h-6 text-white" />,
     title: 'Novyx Core',
     description: 'Flagship persistent intelligence system with infinite memory and cross-session learning capabilities.',
     badge: 'Flagship',
@@ -23,7 +23,7 @@ const liveProjects = [
     href: '/core',
   },
   {
-    icon: Scale,
+    icon: <Scale className="w-6 h-6 text-white" />,
     title: 'Legal Generator',
     description: 'AI-powered legal document generation for NDAs, operating agreements, and compliance documents.',
     badge: 'Live',
@@ -34,14 +34,14 @@ const liveProjects = [
 
 const upcomingProjects = [
   {
-    icon: Shield,
+    icon: <Shield className="w-6 h-6 text-white" />,
     title: 'Compliance Hub',
     description: 'Automated compliance tracking, regulatory monitoring, and deadline management for startups.',
     badge: 'Q2 2026',
     badgeColor: 'bg-gray-500',
   },
   {
-    icon: Sparkles,
+    icon: <Sparkles className="w-6 h-6 text-white" />,
     title: 'Finance Automation',
     description: 'AI-powered bookkeeping, expense tracking, and financial forecasting tailored for early-stage companies.',
     badge: 'Q3 2026',
