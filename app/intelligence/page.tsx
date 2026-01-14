@@ -30,8 +30,7 @@ export default function IntelligencePage() {
             Intelligence
           </h1>
           <p className="text-xl text-slate-300">
-            Thought leadership on enterprise governance, federated architectures, and
-            cryptographic trust for regulated industries
+            Deep-dives on persistent knowledge graphs, self-healing systems, and secure data architectures
           </p>
         </div>
       </section>
@@ -40,9 +39,9 @@ export default function IntelligencePage() {
       <section className="px-4 sm:px-6 lg:px-8 py-24 bg-slate-900">
         <div className="max-w-6xl mx-auto">
           <div className="mb-12">
-            <h2 className="text-3xl font-bold text-white font-mono mb-4">Featured Research</h2>
+            <h2 className="text-3xl font-bold text-white font-mono mb-4">Latest Articles</h2>
             <p className="text-slate-400">
-              Technical deep-dives on the architectures powering next-generation enterprise systems
+              How to build knowledge graphs that persist, heal, and scale
             </p>
           </div>
 
@@ -82,83 +81,32 @@ export default function IntelligencePage() {
         </div>
       </section>
 
-      {/* Research Topics */}
-      <section className="px-4 sm:px-6 lg:px-8 py-24 bg-midnight">
-        <div className="max-w-6xl mx-auto">
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-white font-mono mb-4">Research Focus Areas</h2>
-            <p className="text-slate-400">
-              Our ongoing research initiatives in enterprise AI governance
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                title: 'Federated Intelligence',
-                desc: 'Distributed knowledge graphs with cryptographic consistency across compliance boundaries',
-                topics: ['Cross-border federation', 'Zero-knowledge proofs', 'Sovereign AI']
-              },
-              {
-                title: 'Cryptographic Trust',
-                desc: 'HMAC-SHA256 integrity and immutable audit trails for regulated industries',
-                topics: ['Digital signatures', 'Audit automation', 'Compliance proofs']
-              },
-              {
-                title: 'Self-Healing Systems',
-                desc: 'Sub-10ms MTTR with automated detection, rollback, and recovery mechanisms',
-                topics: ['Anomaly detection', 'Auto-recovery', 'Version control']
-              },
-              {
-                title: 'Multi-Tenant Isolation',
-                desc: 'Zero-knowledge tenant boundaries with cryptographic sovereignty guarantees',
-                topics: ['Tenant isolation', 'Data sovereignty', 'Access control']
-              },
-              {
-                title: 'Performance Engineering',
-                desc: 'Microsecond-latency operations at enterprise scale with 99.99% uptime',
-                topics: ['Query optimization', 'Index strategies', 'Caching layers']
-              },
-              {
-                title: 'Regulatory Frameworks',
-                desc: 'Implementation patterns for SOC 2, ISO 27001, GDPR, and HIPAA compliance',
-                topics: ['Policy enforcement', 'Audit trails', 'Compliance automation']
-              },
-            ].map((area) => (
-              <div key={area.title} className="border border-slate-700 rounded-xl p-6 bg-slate-900/50 backdrop-blur-sm">
-                <div className="w-10 h-10 rounded-lg bg-accent/10 border border-accent/30 flex items-center justify-center mb-4">
-                  <Brain className="w-5 h-5 text-accent" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2 font-mono">{area.title}</h3>
-                <p className="text-slate-400 text-sm mb-4">{area.desc}</p>
-                <div className="flex flex-wrap gap-2">
-                  {area.topics.map((topic) => (
-                    <span key={topic} className="px-2 py-1 rounded bg-accent/10 text-accent font-mono text-xs">
-                      {topic}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="px-4 sm:px-6 lg:px-8 py-24 bg-gradient-to-br from-slate-900 to-midnight">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6 font-mono">
-            Enterprise Architecture Consultation
+            Ready to Build?
           </h2>
           <p className="text-xl text-slate-400 mb-8">
-            Work with our research team on custom governance architectures for your organization
+            Start with our open-source core or talk to us about managed hosting and enterprise features
           </p>
-          <a
-            href="/contact"
-            className="inline-flex items-center px-8 py-4 rounded-xl bg-accent text-midnight font-mono font-semibold hover:bg-accent/90 transition-all"
-          >
-            Schedule Consultation
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://github.com/novyxlabs/novyx-core"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-8 py-4 rounded-xl bg-accent text-midnight font-mono font-semibold hover:bg-accent/90 transition-all"
+            >
+              View on GitHub
+            </a>
+            <a
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 rounded-xl border border-slate-600 text-white font-mono font-semibold hover:bg-slate-800 transition-all"
+            >
+              Contact Sales
+            </a>
+          </div>
         </div>
       </section>
     </div>

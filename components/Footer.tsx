@@ -9,8 +9,8 @@ const navigation = {
   ],
   resources: [
     { name: 'Research & Policy', href: '/intelligence' },
-    { name: 'GitHub', href: 'https://github.com/novyxlabs' },
-    { name: 'Documentation', href: 'https://github.com/novyxlabs' },
+    { name: 'GitHub', href: 'https://github.com/novyxlabs/novyx-core' },
+    { name: 'Documentation', href: 'https://github.com/novyxlabs/novyx-core' },
   ],
   company: [
     { name: 'About', href: '/about' },
@@ -43,7 +43,7 @@ export function Footer() {
                 <Mail className="w-5 h-5" />
               </a>
               <a
-                href="https://github.com/novyxlabs"
+                href="https://github.com/novyxlabs/novyx-core"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-500 hover:text-accent transition-colors"

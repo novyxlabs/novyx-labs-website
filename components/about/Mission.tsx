@@ -21,13 +21,12 @@ export function Mission() {
         </div>
         
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 font-mono">
-          Automated Trust for the Federated Enterprise
+          Fix AI Forgetfulness
         </h1>
         
         <p className="text-2xl text-slate-300 leading-relaxed mb-12 max-w-4xl mx-auto">
-          Novyx Labs provides the complete stack for enterprise governance and federated intelligence—from 
-          open-core cryptographic foundations to enterprise-plus compliance automation. We deliver 
-          mathematical guarantees of integrity, sovereignty, and auditability for regulated industries.
+          Most AI forgets everything. We build persistent knowledge graphs that keep context forever. 
+          Start free with open source. Scale to managed hosting. Deploy enterprise governance.
         </p>
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">

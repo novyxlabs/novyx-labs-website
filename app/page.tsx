@@ -2,15 +2,16 @@ import { Metadata } from 'next'
 import { EnterpriseHero } from '@/components/home/EnterpriseHero'
 import { EnterpriseCapabilities } from '@/components/home/EnterpriseCapabilities'
 import { GovernanceArchitecture } from '@/components/home/GovernanceArchitecture'
+import { Pricing } from '@/components/Pricing'
 import { CTA } from '@/components/home/CTA'
 
 export const metadata: Metadata = {
-  title: 'Novyx Labs - Automated Trust for the Federated Enterprise',
-  description: 'Enterprise governance and federated intelligence with cryptographic integrity, multi-tenant sovereignty, and sub-10ms MTTR. SOC 2, ISO 27001, GDPR compliant.',
-  keywords: ['enterprise governance', 'federated intelligence', 'cryptographic integrity', 'HMAC-SHA256', 'multi-tenant', 'data sovereignty', 'compliance', 'zero-knowledge', 'knowledge graph'],
+  title: 'Novyx Labs - Fix AI Forgetfulness with Persistent Knowledge Graphs',
+  description: 'Open-source knowledge graph with secure data linking, self-healing architecture, and multi-tenant isolation. Start free, scale to managed hosting, or deploy enterprise governance.',
+  keywords: ['knowledge graph', 'persistent AI', 'self-healing', 'multi-tenant', 'data sovereignty', 'enterprise governance', 'federated intelligence'],
   openGraph: {
-    title: 'Novyx Labs - Automated Trust for the Federated Enterprise',
-    description: 'Cryptographic integrity and data sovereignty for regulated enterprises',
+    title: 'Novyx Labs - Fix AI Forgetfulness',
+    description: 'Persistent knowledge graphs that never forget. Open source to enterprise.',
   },
 }
 
@@ -20,6 +21,7 @@ export default function Home() {
       <EnterpriseHero />
       <EnterpriseCapabilities />
       <GovernanceArchitecture />
+      <Pricing />
       <CTA />
     </>
   )

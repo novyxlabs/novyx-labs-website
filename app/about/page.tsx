@@ -1,15 +1,14 @@
 import { Mission } from '@/components/about/Mission'
-import { Story } from '@/components/about/Story'
 import { Values } from '@/components/about/Values'
 import { Contact } from '@/components/about/Contact'
 
 export const metadata = {
-  title: 'About - Automated Trust for the Federated Enterprise | Novyx Labs LLC',
-  description: 'Novyx Labs provides enterprise governance and federated intelligence—from open-core cryptographic foundations to enterprise-plus compliance automation.',
-  keywords: ['enterprise governance', 'federated intelligence', 'cryptographic trust', 'compliance automation', 'SOC 2', 'ISO 27001'],
+  title: 'About - Fix AI Forgetfulness | Novyx Labs LLC',
+  description: 'Novyx Labs builds persistent knowledge graphs that fix AI forgetfulness. From open-source foundations to enterprise governance.',
+  keywords: ['persistent AI', 'knowledge graphs', 'self-healing', 'enterprise governance', 'open source'],
   openGraph: {
-    title: 'About Novyx Labs - Enterprise Governance',
-    description: 'Automated trust for the federated enterprise',
+    title: 'About Novyx Labs - Fix AI Forgetfulness',
+    description: 'Persistent knowledge graphs that never forget',
     type: 'website',
   },
 }
@@ -18,7 +17,6 @@ export default function AboutPage() {
   return (
     <>
       <Mission />
-      <Story />
       <Values />
       <Contact />
     </>

@@ -9,7 +9,7 @@ import { useTheme } from './ThemeProvider'
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Open Core', href: '/core' },
-  { name: 'Enterprise Platform', href: '/enterprise' },
+  { name: 'Solutions', href: '/solutions' },
   { name: 'Intelligence', href: '/intelligence' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },

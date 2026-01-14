@@ -53,7 +53,7 @@ export function CoreCTA() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="https://github.com/novyxlabs" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/novyxlabs/novyx-core" target="_blank" rel="noopener noreferrer">
             <Button size="lg" className="bg-accent text-midnight hover:bg-accent/90 font-mono">
               View on GitHub
               <ArrowRight className="ml-2 w-5 h-5" />

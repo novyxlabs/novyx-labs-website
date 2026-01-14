@@ -31,10 +31,22 @@ export function EnterpriseHero() {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl sm:text-2xl text-slate-300 mb-10 max-w-4xl mx-auto leading-relaxed">
-            Novyx Labs delivers cryptographic integrity and multi-tenant data sovereignty
-            for enterprises demanding zero-knowledge governance at scale.
+          <p className="text-xl sm:text-2xl text-slate-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Fix AI forgetfulness. Build knowledge graphs that persist, verify, and scale.
           </p>
+
+          {/* 3-Line API Hook */}
+          <div className="bg-midnight border border-slate-700 rounded-xl p-6 max-w-2xl mx-auto mb-10 text-left">
+            <div className="flex items-center justify-between mb-3">
+              <span className="text-accent font-mono text-xs">QUICK START</span>
+              <span className="text-slate-500 font-mono text-xs">3 lines of code</span>
+            </div>
+            <pre className="text-accent font-mono text-sm leading-relaxed">
+              <code>{`const core = new NovyxCore();
+await core.store({ data: "persistent" });
+await core.query("what did I store?");`}</code>
+            </pre>
+          </div>
 
           {/* Technical Specs */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12 max-w-3xl mx-auto">

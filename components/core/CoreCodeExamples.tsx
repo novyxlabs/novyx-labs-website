@@ -150,7 +150,7 @@ export function CoreCodeExamples() {
               Full documentation and integration guides available on GitHub
             </p>
             <a
-              href="https://github.com/novyxlabs"
+              href="https://github.com/novyxlabs/novyx-core"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-4 rounded-xl bg-accent text-midnight font-mono font-semibold hover:bg-accent/90 transition-all"

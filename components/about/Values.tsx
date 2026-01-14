@@ -1,27 +1,22 @@
 'use client'
 
-import { Shield, Lock, Network, Cpu } from 'lucide-react'
+import { Heart, Code, Scale } from 'lucide-react'
 
 const values = [
   {
-    icon: Shield,
-    title: 'Security First',
-    description: 'Every architectural decision prioritizes cryptographic integrity. HMAC-SHA256 signatures, immutable audit trails, and zero-knowledge boundaries are non-negotiable foundations.',
+    icon: Heart,
+    title: 'Built for Developers',
+    description: 'Three lines of code to get started. Clean APIs. Complete documentation. Open-source foundations. We make persistent knowledge graphs as simple as setting a variable.',
   },
   {
-    icon: Lock,
-    title: 'Regulatory Excellence',
-    description: 'Compliance is not a checkbox—it\'s embedded in the architecture. SOC 2 Type II, ISO 27001, GDPR, and HIPAA requirements drive our design from day one.',
+    icon: Code,
+    title: 'Open Core, Enterprise Ready',
+    description: 'Start free with full MIT-licensed source code. Scale to managed hosting when you need it. Deploy enterprise governance when you grow. No lock-in, just options.',
   },
   {
-    icon: Network,
-    title: 'Open Core Philosophy',
-    description: 'Enterprise-grade governance should not require vendor lock-in. Our open-core foundation ensures transparency, auditability, and community-driven innovation.',
-  },
-  {
-    icon: Cpu,
-    title: 'Performance Guarantees',
-    description: 'Sub-10ms MTTR is not marketing—it\'s our SLA. Enterprise systems demand microsecond-latency operations with 99.99% uptime. We deliver mathematical proof, not promises.',
+    icon: Scale,
+    title: 'Performance at Scale',
+    description: 'Self-healing architecture with sub-10ms recovery. Multi-tenant isolation for SaaS. Secure data linking with version control. Production-grade from day one.',
   },
 ]
 
@@ -31,14 +26,14 @@ export function Values() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4 font-mono text-white">
-            Our <span className="text-accent">Principles</span>
+            Our <span className="text-accent">Philosophy</span>
           </h2>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-            The architectural philosophy behind every decision
+            Why we build what we build
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {values.map((value, index) => (
             <div
               key={value.title}
