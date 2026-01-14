@@ -6,22 +6,22 @@ const values = [
   {
     icon: Heart,
     title: 'Founder-First',
-    description: 'Every decision we make is with founders in mind. We build tools that we would want to use ourselves.',
+    description: 'Every AI solution we build starts with real founder problems. We create tools that we would want to use ourselves, addressing actual pain points, not imagined ones.',
   },
   {
     icon: Zap,
-    title: 'Move Fast',
-    description: 'Speed matters in startups. We help you move quickly without sacrificing quality or compliance.',
+    title: 'Intelligent by Default',
+    description: 'AI should learn and adapt, not just execute commands. Our systems get smarter with every interaction, providing increasingly valuable assistance over time.',
   },
   {
     icon: Users,
-    title: 'Accessible',
-    description: 'Legal services should be available to everyone, not just those who can afford expensive lawyers.',
+    title: 'Accessible Innovation',
+    description: 'Advanced AI shouldn\'t require enterprise budgets. We make powerful intelligence accessible to every founder, from solo entrepreneurs to scaling startups.',
   },
   {
     icon: Eye,
-    title: 'Transparent',
-    description: 'No hidden fees, no legal jargon. We believe in clear communication and honest pricing.',
+    title: 'Transparent & Ethical',
+    description: 'Clear pricing, no hidden fees, ethical AI practices. We believe in honest communication about what our AI can and cannot do.',
   },
 ]
 

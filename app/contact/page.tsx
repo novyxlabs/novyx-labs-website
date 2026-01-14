@@ -3,8 +3,13 @@ import { ContactForm } from '@/components/contact/ContactForm'
 import { ContactInfo } from '@/components/contact/ContactInfo'
 
 export const metadata = {
-  title: 'Contact - Novyx Labs',
-  description: 'Get in touch with the Novyx Labs team.',
+  title: 'Contact - Get in Touch | Novyx Labs',
+  description: 'Connect with the Novyx Labs team about AI solutions, Novyx Core, or partnership opportunities.',
+  openGraph: {
+    title: 'Contact Novyx Labs',
+    description: 'Get in touch about AI solutions and intelligent automation',
+    type: 'website',
+  },
 }
 
 export default function ContactPage() {
@@ -22,6 +27,8 @@ export default function ContactPage() {
     </>
   )
 }
+
+
 
 
 

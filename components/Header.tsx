@@ -8,8 +8,11 @@ import { useTheme } from './ThemeProvider'
 
 const navigation = [
   { name: 'Home', href: '/' },
+  { name: 'Core Tech', href: '/core' },
+  { name: 'Solutions', href: '/solutions' },
+  { name: 'Ecosystem', href: '/ecosystem' },
+  { name: 'Blog', href: '/blog' },
   { name: 'About', href: '/about' },
-  { name: 'Products', href: '/products' },
   { name: 'Contact', href: '/contact' },
 ]
 
@@ -38,10 +41,10 @@ export function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-medium transition-colors hover:text-indigo-600 dark:hover:text-indigo-400 ${
+                className={`text-sm font-medium transition-colors hover:text-electric-blue dark:hover:text-electric-blue ${
                   pathname === item.href
-                    ? 'text-indigo-600 dark:text-indigo-400'
-                    : 'text-gray-700 dark:text-gray-300'
+                    ? 'text-electric-blue dark:text-electric-blue'
+                    : 'text-navy dark:text-gray-300'
                 }`}
               >
                 {item.name}
@@ -96,8 +99,8 @@ export function Header() {
                 onClick={() => setMobileMenuOpen(false)}
                 className={`block px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                   pathname === item.href
-                    ? 'bg-indigo-50 dark:bg-indigo-900/20 text-indigo-600 dark:text-indigo-400'
-                    : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
+                    ? 'bg-electric-blue/10 dark:bg-electric-blue/20 text-electric-blue dark:text-electric-blue'
+                    : 'text-navy dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-navy-800'
                 }`}
               >
                 {item.name}
@@ -109,6 +112,8 @@ export function Header() {
     </header>
   )
 }
+
+
 
 
 
