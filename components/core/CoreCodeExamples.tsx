@@ -5,44 +5,54 @@ import { Code, Copy, Check } from 'lucide-react'
 
 const codeExamples = [
   {
-    title: 'Store Knowledge',
-    description: 'Save information that persists forever',
-    code: `// Store a fact in your knowledge graph
-await core.store({
-  entity: "UserPreference",
+    title: 'Cryptographic Writes',
+    description: 'HMAC-signed transactions with integrity proofs',
+    code: `// Store with cryptographic signature
+const tx = await core.transaction({
+  tenant: "acme-corp",
+  operation: "CREATE",
+  entity: "audit_record",
   data: {
-    name: "Blake",
-    role: "Founder",
-    focus: "Legal Tech SaaS"
+    actor: "admin@acme.com",
+    action: "data_export",
+    timestamp: Date.now()
   }
 });
 
-// Core remembers this forever`
+// Returns HMAC-SHA256 signature
+// tx.signature: "a3f7c9d1e..."
+// tx.merkleRoot: "8b2e4a6f..."`
   },
   {
-    title: 'Query Context',
-    description: 'Retrieve remembered information',
-    code: `// Ask Core what it knows
-const context = await core.query(
-  "What is Blake working on?"
-);
-
-// Returns: "Blake is a Founder 
-// focused on Legal Tech SaaS"
-
-// Context from previous conversations!`
-  },
-  {
-    title: 'Build Connections',
-    description: 'Create relationships between entities',
-    code: `// Link related information
-await core.connect({
-  from: "Blake",
-  to: "Novyx Core",
-  relationship: "building"
+    title: 'Immutable Queries',
+    description: 'Time-travel queries with version control',
+    code: `// Query historical state
+const state = await core.query({
+  tenant: "acme-corp",
+  timestamp: "2025-12-01T00:00:00Z",
+  verifyIntegrity: true
 });
 
-// Knowledge graph grows automatically`
+// Returns cryptographically-verified
+// historical state with proof chain
+
+// state.verified: true
+// state.signatureChain: [...]`
+  },
+  {
+    title: 'Zero-Knowledge Federation',
+    description: 'Cross-region sync with sovereignty guarantees',
+    code: `// Federate across compliance zones
+const proof = await core.federation.sync({
+  sourceRegion: "eu-west",
+  targetRegion: "us-east",
+  merkleRoot: tx.merkleRoot,
+  zeroKnowledge: true
+});
+
+// Consistency verified without
+// exposing tenant data
+// proof.consistent: true`
   }
 ]
 
@@ -57,22 +67,28 @@ export function CoreCodeExamples() {
   }
 
   return (
-    <section id="code" className="py-24 px-4 sm:px-6 lg:px-8 bg-navy text-white relative overflow-hidden">
+    <section id="code" className="py-24 px-4 sm:px-6 lg:px-8 bg-midnight text-white relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 neural-connections opacity-10" />
+      <div 
+        className="absolute inset-0 opacity-10"
+        style={{
+          backgroundImage: `linear-gradient(rgba(56, 189, 248, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(56, 189, 248, 0.1) 1px, transparent 1px)`,
+          backgroundSize: '50px 50px'
+        }}
+      />
       
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-semibold mb-6">
+          <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-accent/10 backdrop-blur-sm border border-accent/30 text-accent text-sm font-mono font-semibold mb-6">
             <Code className="w-4 h-4" />
-            <span>Code Examples</span>
+            <span>API EXAMPLES</span>
           </div>
-          <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-            Simple to Use
+          <h2 className="text-4xl sm:text-5xl font-bold mb-6 font-mono">
+            Enterprise API
           </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
-            Three lines of code. That's all it takes to build persistent knowledge graphs.
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            Cryptographic operations with mathematical guarantees of integrity and sovereignty
           </p>
         </div>
 
@@ -83,10 +99,10 @@ export function CoreCodeExamples() {
               <button
                 key={example.title}
                 onClick={() => setActiveExample(index)}
-                className={`px-6 py-3 rounded-xl font-medium transition-all ${
+                className={`px-6 py-3 rounded-xl font-mono font-medium transition-all ${
                   activeExample === index
-                    ? 'bg-electric-blue text-white shadow-lg'
-                    : 'bg-white/10 text-white/80 hover:bg-white/20'
+                    ? 'bg-accent text-midnight shadow-lg'
+                    : 'bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700'
                 }`}
               >
                 {example.title}
@@ -95,34 +111,34 @@ export function CoreCodeExamples() {
           </div>
 
           {/* Code Display */}
-          <div className="glass rounded-2xl overflow-hidden bg-navy-900/50 backdrop-blur-xl border border-white/20">
+          <div className="rounded-2xl overflow-hidden bg-slate-900 backdrop-blur-xl border border-slate-700">
             {/* Header */}
-            <div className="flex items-center justify-between px-6 py-4 border-b border-white/10">
+            <div className="flex items-center justify-between px-6 py-4 border-b border-slate-700">
               <div>
-                <h3 className="font-bold text-lg">{codeExamples[activeExample].title}</h3>
-                <p className="text-white/60 text-sm">{codeExamples[activeExample].description}</p>
+                <h3 className="font-bold text-lg font-mono text-white">{codeExamples[activeExample].title}</h3>
+                <p className="text-slate-400 text-sm">{codeExamples[activeExample].description}</p>
               </div>
               <button
                 onClick={copyCode}
-                className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 transition-all"
+                className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-600 transition-all"
               >
                 {copied ? (
                   <>
                     <Check className="w-4 h-4 text-green-400" />
-                    <span className="text-sm">Copied!</span>
+                    <span className="text-sm text-slate-300">Copied!</span>
                   </>
                 ) : (
                   <>
-                    <Copy className="w-4 h-4" />
-                    <span className="text-sm">Copy</span>
+                    <Copy className="w-4 h-4 text-slate-400" />
+                    <span className="text-sm text-slate-300">Copy</span>
                   </>
                 )}
               </button>
             </div>
 
             {/* Code Block */}
-            <div className="p-6 font-mono text-sm overflow-x-auto">
-              <pre className="text-electric-blue-200">
+            <div className="p-6 font-mono text-sm overflow-x-auto bg-midnight">
+              <pre className="text-accent">
                 <code>{codeExamples[activeExample].code}</code>
               </pre>
             </div>
@@ -130,17 +146,17 @@ export function CoreCodeExamples() {
 
           {/* GitHub CTA */}
           <div className="mt-12 text-center">
-            <p className="text-white/80 mb-6">
-              Want to see more? Check out our GitHub repo for full documentation and examples.
+            <p className="text-slate-400 mb-6 font-mono text-sm">
+              Full documentation and integration guides available on GitHub
             </p>
             <a
               href="https://github.com/novyxlabs"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-4 rounded-xl bg-white text-navy font-semibold hover:bg-white/90 transition-all"
+              className="inline-flex items-center px-8 py-4 rounded-xl bg-accent text-midnight font-mono font-semibold hover:bg-accent/90 transition-all"
             >
               <Code className="mr-2 w-5 h-5" />
-              View on GitHub
+              View Documentation
             </a>
           </div>
         </div>

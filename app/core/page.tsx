@@ -6,11 +6,12 @@ import { CoreUseCases } from '@/components/core/CoreUseCases'
 import { CoreCTA } from '@/components/core/CoreCTA'
 
 export const metadata: Metadata = {
-  title: 'Novyx Core - Persistent AI Brain for Knowledge Graphs | Novyx Labs',
-  description: 'A persistent AI brain that remembers everything. Build knowledge graphs that endure across conversations and grow smarter over time.',
+  title: 'Novyx Core - Open-Core Knowledge Graph for Enterprise Governance | Novyx Labs',
+  description: 'Cryptographic knowledge graph with HMAC-SHA256 integrity, immutable versioning, and multi-tenant isolation. Open-source foundation for federated intelligence.',
+  keywords: ['knowledge graph', 'cryptographic integrity', 'HMAC-SHA256', 'multi-tenant', 'federated intelligence', 'enterprise governance', 'open source'],
   openGraph: {
-    title: 'Novyx Core - Persistent AI Brain for Knowledge Graphs',
-    description: 'Build knowledge graphs that persist and learn across every interaction',
+    title: 'Novyx Core - Enterprise Knowledge Graph',
+    description: 'Open-core foundation for cryptographic governance and federated intelligence',
     type: 'website',
   },
 }
