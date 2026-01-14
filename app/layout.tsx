@@ -1,59 +1,44 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { Header } from '@/components/Header'
-import { Footer } from '@/components/Footer'
-import { ThemeProvider } from '@/components/ThemeProvider'
-import { Analytics } from '@/components/Analytics'
+import { InfraHeader } from '@/components/InfraHeader'
+import { InfraFooter } from '@/components/InfraFooter'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
-    default: 'Novyx Labs - Persistent AI for Knowledge Graphs',
+    default: 'Novyx Labs - Building the persistence layer for autonomous AI',
     template: '%s | Novyx Labs'
   },
-  description: 'Persistent AI brain for enduring knowledge graphs. Core powers multi-tenant, versioned, federated knowledge storage for AI applications.',
-  keywords: ['persistent AI', 'knowledge graphs', 'AI memory', 'persistent memory', 'knowledge graph database', 'Novyx Core', 'AI infrastructure', 'federated AI', 'multi-tenant AI', 'AI versioning'],
+  description: 'Infrastructure for AI agents that remember. Cryptographically durable memory, integrity verification, and context preservation for autonomous systems.',
+  keywords: ['AI agent memory', 'memory persistence', 'AI infrastructure', 'memory poisoning', 'cryptographic verification', 'agent persistence', 'durable AI', 'knowledge graph'],
   authors: [{ name: 'Novyx Labs', url: 'https://novyxlabs.com' }],
   creator: 'Novyx Labs',
   publisher: 'Novyx Labs',
-  metadataBase: new URL('https://novyx-labs-website.vercel.app'),
+  metadataBase: new URL('https://novyxlabs.com'),
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://novyx-labs-website.vercel.app',
-    title: 'Novyx Labs - Persistent AI for Knowledge Graphs',
-    description: 'Core powers persistent memory for AI applications with multi-tenant architecture',
+    url: 'https://novyxlabs.com',
+    title: 'Novyx Labs - Intelligence that persists. Code that endures.',
+    description: 'Infrastructure for AI agents that remember. Building durable, verifiable persistence for autonomous systems.',
     siteName: 'Novyx Labs',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Novyx Labs - AI Innovation Hub',
+        alt: 'Novyx Labs - AI Persistence Infrastructure',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Novyx Labs - Persistent AI for Knowledge Graphs',
-    description: 'Core powers persistent memory for AI applications',
+    title: 'Novyx Labs - Intelligence that persists. Code that endures.',
+    description: 'Infrastructure for AI agents that remember.',
     images: ['/og-image.png'],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  icons: {
-    icon: '/favicon.ico',
+    creator: '@NovyxLabs',
   },
 }
 
@@ -63,18 +48,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body className={inter.className}>
-        <ThemeProvider>
-          <Analytics />
-          <div className="flex flex-col min-h-screen">
-            <Header />
-            <main className="flex-grow">
-              {children}
-            </main>
-            <Footer />
-          </div>
-        </ThemeProvider>
+        <div className="flex flex-col min-h-screen">
+          <InfraHeader />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <InfraFooter />
+        </div>
       </body>
     </html>
   )
