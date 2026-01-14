@@ -84,7 +84,7 @@ export function SolutionsList() {
                   <div>
                     <div className="flex items-center gap-4 mb-4">
                       <div className="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center flex-shrink-0">
-                        <solution.icon className="w-7 h-7 text-white" />
+                        {solution.icon}
                       </div>
                       <span className={`${solution.badgeColor} text-white px-3 py-1 rounded-full text-sm font-semibold`}>
                         {solution.badgeText}
