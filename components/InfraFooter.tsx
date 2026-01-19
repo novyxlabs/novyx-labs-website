@@ -1,23 +1,23 @@
 'use client'
 
 import Link from 'next/link'
-import { GitBranch, Mail, Twitter } from 'lucide-react'
+import { Mail, Twitter, Linkedin } from 'lucide-react'
 
 const navigation = {
   products: [
     { name: 'Novyx Core', href: '/products/core' },
+    { name: 'Novyx RAM', href: '/products/ram' },
     { name: 'Novyx Integrity', href: '/products/integrity' },
-    { name: 'All Products', href: '/products' },
+    { name: 'LangChain Integration', href: '/products/langchain' },
   ],
   company: [
     { name: 'About', href: '/about' },
-    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' },
     { name: 'Careers', href: 'mailto:careers@novyxlabs.com' },
   ],
-  developers: [
-    { name: 'GitHub', href: 'https://github.com/novyxlabs/novyx-core' },
-    { name: 'Documentation', href: 'https://github.com/novyxlabs/novyx-core#readme' },
-    { name: 'Contribute', href: 'https://github.com/novyxlabs/ideas' },
+  legal: [
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
   ],
 }
 
@@ -35,10 +35,10 @@ export function InfraFooter() {
               <span className="font-mono font-bold text-xl text-white">Novyx Labs</span>
             </div>
             <p className="text-steel-400 text-sm leading-relaxed mb-4">
-              Infrastructure for AI agents that remember.
+              Durable memory infrastructure for AI agents.
             </p>
             <p className="text-steel-500 text-xs font-mono">
-              © 2024 Novyx Labs
+              © 2025 Novyx Labs
             </p>
           </div>
 
@@ -67,7 +67,6 @@ export function InfraFooter() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    target={item.href.startsWith('mailto') ? undefined : undefined}
                     className="text-steel-400 hover:text-white text-sm transition-colors"
                   >
                     {item.name}
@@ -77,20 +76,18 @@ export function InfraFooter() {
             </ul>
           </div>
 
-          {/* Developers */}
+          {/* Legal */}
           <div>
-            <h3 className="text-white font-mono font-bold text-sm mb-4">Developers</h3>
+            <h3 className="text-white font-mono font-bold text-sm mb-4">Legal</h3>
             <ul className="space-y-2">
-              {navigation.developers.map((item) => (
+              {navigation.legal.map((item) => (
                 <li key={item.name}>
-                  <a
+                  <Link
                     href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="text-steel-400 hover:text-white text-sm transition-colors"
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -101,27 +98,11 @@ export function InfraFooter() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Tagline */}
             <p className="text-steel-500 text-sm font-mono">
-              Intelligence that persists. Code that endures.
+              Durable memory infrastructure for AI agents.
             </p>
 
             {/* Social */}
             <div className="flex items-center space-x-4">
-              <a
-                href="https://github.com/novyxlabs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-lg text-steel-400 hover:text-white hover:bg-steel-800/30 transition-colors"
-                aria-label="GitHub"
-              >
-                <GitBranch className="w-5 h-5" />
-              </a>
-              <a
-                href="mailto:hello@novyxlabs.com"
-                className="p-2 rounded-lg text-steel-400 hover:text-white hover:bg-steel-800/30 transition-colors"
-                aria-label="Email"
-              >
-                <Mail className="w-5 h-5" />
-              </a>
               <a
                 href="https://twitter.com/novyxlabs"
                 target="_blank"
@@ -130,6 +111,22 @@ export function InfraFooter() {
                 aria-label="Twitter"
               >
                 <Twitter className="w-5 h-5" />
+              </a>
+              <a
+                href="https://linkedin.com/company/novyxlabs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg text-steel-400 hover:text-white hover:bg-steel-800/30 transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a
+                href="mailto:hello@novyxlabs.com"
+                className="p-2 rounded-lg text-steel-400 hover:text-white hover:bg-steel-800/30 transition-colors"
+                aria-label="Email"
+              >
+                <Mail className="w-5 h-5" />
               </a>
             </div>
           </div>

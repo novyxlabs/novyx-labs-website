@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import { Send } from 'lucide-react'
-import { Button } from '@/components/Button'
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -40,7 +39,7 @@ export function ContactForm() {
     }
   }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -48,12 +47,10 @@ export function ContactForm() {
   }
 
   return (
-    <div className="glass rounded-2xl p-8">
-      <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
-      
+    <div className="p-8 rounded-2xl bg-steel-900/20 border border-steel-700/30">
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium mb-2">
+          <label htmlFor="name" className="block text-sm font-mono font-medium text-steel-300 mb-2">
             Name *
           </label>
           <input
@@ -63,13 +60,13 @@ export function ContactForm() {
             required
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors"
+            className="w-full px-4 py-3 rounded-lg border border-steel-700/30 bg-void-900 text-white placeholder-steel-500 focus:ring-2 focus:ring-pulse focus:border-transparent transition-colors"
             placeholder="Your name"
           />
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-sm font-medium mb-2">
+          <label htmlFor="email" className="block text-sm font-mono font-medium text-steel-300 mb-2">
             Email *
           </label>
           <input
@@ -79,13 +76,13 @@ export function ContactForm() {
             required
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors"
+            className="w-full px-4 py-3 rounded-lg border border-steel-700/30 bg-void-900 text-white placeholder-steel-500 focus:ring-2 focus:ring-pulse focus:border-transparent transition-colors"
             placeholder="your@email.com"
           />
         </div>
 
         <div>
-          <label htmlFor="company" className="block text-sm font-medium mb-2">
+          <label htmlFor="company" className="block text-sm font-mono font-medium text-steel-300 mb-2">
             Company
           </label>
           <input
@@ -94,54 +91,53 @@ export function ContactForm() {
             name="company"
             value={formData.company}
             onChange={handleChange}
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors"
+            className="w-full px-4 py-3 rounded-lg border border-steel-700/30 bg-void-900 text-white placeholder-steel-500 focus:ring-2 focus:ring-pulse focus:border-transparent transition-colors"
             placeholder="Your company (optional)"
           />
         </div>
 
         <div>
-          <label htmlFor="message" className="block text-sm font-medium mb-2">
+          <label htmlFor="message" className="block text-sm font-mono font-medium text-steel-300 mb-2">
             Message *
           </label>
           <textarea
             id="message"
             name="message"
             required
-            rows={5}
+            rows={4}
             value={formData.message}
             onChange={handleChange}
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors resize-none"
-            placeholder="Tell us how we can help..."
+            className="w-full px-4 py-3 rounded-lg border border-steel-700/30 bg-void-900 text-white placeholder-steel-500 focus:ring-2 focus:ring-pulse focus:border-transparent transition-colors resize-none"
+            placeholder="Tell us about your use case..."
           />
         </div>
 
         {status === 'success' && (
-          <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg text-green-800 dark:text-green-200">
-            Thanks for reaching out! We'll get back to you soon.
+          <div className="p-4 bg-green-900/20 border border-green-800/30 rounded-lg text-green-400">
+            Thanks for reaching out! We'll get back to you within 24 hours.
           </div>
         )}
 
         {status === 'error' && (
-          <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg text-red-800 dark:text-red-200">
+          <div className="p-4 bg-red-900/20 border border-red-800/30 rounded-lg text-red-400">
             {errorMessage}
           </div>
         )}
 
-        <Button
+        <button
           type="submit"
-          size="lg"
           disabled={status === 'loading'}
-          className="w-full"
+          className="w-full inline-flex items-center justify-center px-6 py-4 rounded-lg bg-pulse text-white font-mono font-semibold hover:bg-pulse-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {status === 'loading' ? (
             'Sending...'
           ) : (
             <>
-              Send Message
+              Request API Key
               <Send className="ml-2 w-5 h-5" />
             </>
           )}
-        </Button>
+        </button>
       </form>
     </div>
   )

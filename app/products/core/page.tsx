@@ -1,7 +1,6 @@
 'use client'
 
-import { Metadata } from 'next'
-import { Database, GitBranch, Lock, Search, FileCheck, Code } from 'lucide-react'
+import { Database, Lock, Search, FileCheck, Code, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 
 export default function CorePage() {
@@ -12,13 +11,13 @@ export default function CorePage() {
           backgroundImage: 'linear-gradient(90deg, rgba(139, 146, 171, 0.03) 1px, transparent 1px), linear-gradient(rgba(139, 146, 171, 0.03) 1px, transparent 1px)',
           backgroundSize: '32px 32px'
         }} />
-        
+
         <div className="relative z-10 max-w-5xl mx-auto">
           <div className="flex items-center space-x-3 mb-6">
             <span className="px-3 py-1 rounded-full bg-green-500/20 text-green-400 border border-green-500/30 text-xs font-mono font-bold">
               LIVE
             </span>
-            <span className="text-steel-500 font-mono text-sm">MIT Licensed · Production Ready</span>
+            <span className="text-steel-500 font-mono text-sm">The Persistence Engine</span>
           </div>
 
           <h1 className="font-mono font-bold text-5xl sm:text-6xl text-white mb-6">
@@ -29,30 +28,26 @@ export default function CorePage() {
           </p>
 
           <p className="text-xl text-steel-300 leading-relaxed mb-12 max-w-3xl">
-            Cryptographically durable knowledge graph for AI agents. Semantic search across versioned artifacts.
-            SHA-256 integrity verification. JSON-LD semantic web standards. Built for research assistants,
-            enterprise memory, and autonomous agent persistence.
+            The brain behind Novyx memory infrastructure. Cryptographically durable knowledge graph for AI agents.
+            Semantic search across versioned artifacts. SHA-256 integrity verification. JSON-LD semantic web standards.
+            Powers all Novyx products.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href="https://github.com/novyxlabs/novyx-core"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/contact"
               className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-pulse text-white font-mono font-semibold hover:bg-pulse-600 transition-all shadow-lg"
             >
-              <GitBranch className="mr-2 w-5 h-5" />
-              Star on GitHub
-            </a>
-            <a
-              href="https://github.com/novyxlabs/novyx-core#documentation"
-              target="_blank"
-              rel="noopener noreferrer"
+              <ArrowRight className="mr-2 w-5 h-5" />
+              Get Access
+            </Link>
+            <Link
+              href="/docs"
               className="inline-flex items-center justify-center px-8 py-4 rounded-lg border border-steel-600 text-white font-mono font-semibold hover:bg-steel-800/30 transition-all"
             >
               <Code className="mr-2 w-5 h-5" />
               View Documentation
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -89,9 +84,9 @@ export default function CorePage() {
                 description: 'Cryptographic tenant isolation. Zero-knowledge boundaries. Built for SaaS from day one.',
               },
               {
-                Icon: GitBranch,
-                title: 'Open Core',
-                description: 'MIT licensed. Full source access. Community-driven development. No vendor lock-in.',
+                Icon: Database,
+                title: 'Foundation Layer',
+                description: 'Powers Novyx RAM, LangChain integration, and Integrity. The core persistence engine.',
               },
             ].map((spec) => {
               const SpecIcon = spec.Icon
@@ -145,10 +140,10 @@ const results = await core.search({
           </div>
 
           <p className="text-steel-500 text-sm mt-4 font-mono">
-            → Full docs at{' '}
-            <a href="https://github.com/novyxlabs/novyx-core" className="text-pulse-400 hover:underline" target="_blank" rel="noopener noreferrer">
-              github.com/novyxlabs/novyx-core
-            </a>
+            → Full documentation available at{' '}
+            <Link href="/docs" className="text-pulse-400 hover:underline">
+              novyxlabs.com/docs
+            </Link>
           </p>
         </div>
       </section>
@@ -193,18 +188,16 @@ const results = await core.search({
             Start Building Today
           </h2>
           <p className="text-xl text-steel-400 mb-8">
-            MIT licensed. Production-ready. Built by infrastructure engineers for infrastructure engineers.
+            Production-ready. Built by infrastructure engineers for infrastructure engineers.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://github.com/novyxlabs/novyx-core"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/contact"
               className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-pulse text-white font-mono font-semibold hover:bg-pulse-600 transition-all shadow-lg"
             >
-              <GitBranch className="mr-2 w-5 h-5" />
-              View on GitHub
-            </a>
+              <ArrowRight className="mr-2 w-5 h-5" />
+              Get Access
+            </Link>
             <Link
               href="/products"
               className="inline-flex items-center justify-center px-8 py-4 rounded-lg border border-steel-600 text-white font-mono font-semibold hover:bg-steel-800/30 transition-all"

@@ -1,28 +1,38 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Database, Shield, Sparkles, Zap, Network, FileCode, ArrowRight } from 'lucide-react'
+import { Database, Shield, Zap, Package, ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Products - Infrastructure for Autonomous AI | Novyx Labs',
-  description: 'Durable, verifiable, production-ready infrastructure for autonomous AI systems. Knowledge graphs, integrity verification, and more.',
-  keywords: ['AI infrastructure', 'agent memory', 'memory verification', 'knowledge graph', 'durable AI'],
+  title: 'Products - Memory Infrastructure for AI Agents | Novyx Labs',
+  description: 'Production-ready memory infrastructure for autonomous AI systems. Knowledge graphs, persistent memory APIs, LangChain integration, and enterprise security.',
+  keywords: ['AI infrastructure', 'agent memory', 'memory verification', 'knowledge graph', 'langchain memory', 'AI API'],
 }
 
 export default function ProductsPage() {
   const products = [
     {
       name: 'Novyx Core',
-      tagline: 'Knowledge graph with semantic search',
-      description: 'Cryptographically durable knowledge graph for AI agents. SHA-256 integrity. JSON-LD semantic search. Open-core foundation for agent memory.',
+      tagline: 'The persistence engine',
+      description: 'Cryptographically durable knowledge graph for AI agents. SHA-256 integrity. JSON-LD semantic search. The foundation powering all Novyx products.',
       status: 'live',
       href: '/products/core',
       Icon: Database,
-      metrics: ['516 artifacts verified', 'SHA-256 signed', 'MIT licensed'],
-      features: ['Semantic search', 'Version control', 'Multi-tenant ready', 'JSON-LD compliance'],
+      metrics: ['Production ready', 'SHA-256 signed', 'Semantic search'],
+      features: ['Knowledge graph', 'Version control', 'Multi-tenant ready', 'JSON-LD compliance'],
+    },
+    {
+      name: 'Novyx RAM',
+      tagline: 'Memory API for developers',
+      description: 'REST API for persistent AI memory. Store, search, and retrieve agent context with sub-millisecond latency. Zero infrastructure to manage.',
+      status: 'live',
+      href: '/products/ram',
+      Icon: Zap,
+      metrics: ['Sub-ms latency', 'REST API', 'Global edge'],
+      features: ['Semantic search', 'Session isolation', 'Real-time', 'SDK support'],
     },
     {
       name: 'Novyx Integrity',
-      tagline: 'Memory verification for enterprise AI',
+      tagline: 'Enterprise security',
       description: 'Security infrastructure for mission-critical AI agents. Real-time poisoning detection. Compliance-ready audit trails for SOC 2, GDPR, HIPAA.',
       status: 'beta',
       href: '/products/integrity',
@@ -31,44 +41,14 @@ export default function ProductsPage() {
       features: ['Poisoning detection', 'Auto-rollback', 'Compliance reports', 'Forensic timeline'],
     },
     {
-      name: 'Context Compression',
-      tagline: 'Efficient long-term memory for agents',
-      description: 'Intelligent summarization of agent memory. Keep context under token limits while preserving critical information. Lossless knowledge distillation.',
-      status: 'coming',
-      href: '/products',
-      Icon: Zap,
-      metrics: ['Q2 2025', '90% compression', 'Zero information loss'],
-      features: ['Token optimization', 'Hierarchical storage', 'Selective recall', 'Cost reduction'],
-    },
-    {
-      name: 'Distributed Memory',
-      tagline: 'Federated knowledge across agent networks',
-      description: 'Sync agent memory across distributed systems. Cryptographic consistency proofs. Multi-region deployment. Built for agent swarms.',
-      status: 'coming',
-      href: '/products',
-      Icon: Network,
-      metrics: ['Q3 2025', 'Multi-region', 'Cryptographic sync'],
-      features: ['Cross-region sync', 'Eventual consistency', 'Conflict resolution', 'Byzantine fault tolerance'],
-    },
-    {
-      name: 'Memory Analytics',
-      tagline: 'Observability for agent knowledge',
-      description: 'Dashboards for memory growth, query patterns, integrity metrics. Debug agent behavior. Optimize knowledge retrieval. Production monitoring.',
-      status: 'coming',
-      href: '/products',
-      Icon: FileCode,
-      metrics: ['Q4 2025', 'Real-time metrics', 'Grafana integration'],
-      features: ['Query analytics', 'Growth tracking', 'Anomaly detection', 'Performance profiling'],
-    },
-    {
-      name: 'Your Idea',
-      tagline: 'What infrastructure do you need?',
-      description: 'We\'re building the persistence layer for autonomous AI. If you\'re solving hard problems in agent memory, we want to hear from you.',
-      status: 'future',
-      href: 'https://github.com/novyxlabs/ideas',
-      Icon: Sparkles,
-      metrics: ['Open roadmap', 'Community-driven', 'Builder-focused'],
-      features: ['Share on GitHub', 'Join discussions', 'Influence roadmap', 'Early access'],
+      name: 'LangChain Integration',
+      tagline: 'pip install novyx-langchain',
+      description: 'Drop-in persistent memory for LangChain agents. Your agents remember everything—across restarts, deployments, and sessions.',
+      status: 'live',
+      href: '/products/langchain',
+      Icon: Package,
+      metrics: ['Live on PyPI', 'Drop-in replacement', 'Zero infrastructure'],
+      features: ['Persistent memory', 'Semantic search', 'Session isolation', 'LangGraph support'],
     },
   ]
 
@@ -94,13 +74,6 @@ export default function ProductsPage() {
           card: 'bg-steel-900/20 border-steel-700/30 hover:border-steel-600',
           icon: 'bg-steel-500/10 border-steel-500/30 text-steel-400',
           text: 'text-steel-400',
-        }
-      case 'future':
-        return {
-          badge: 'bg-purple-500/20 text-purple-400 border-purple-500/30',
-          card: 'bg-purple-950/10 border-purple-800/30 hover:border-purple-600',
-          icon: 'bg-purple-500/10 border-purple-500/30 text-purple-400',
-          text: 'text-purple-400',
         }
       default:
         return {
@@ -186,7 +159,7 @@ export default function ProductsPage() {
 
                   {/* CTA */}
                   <div className={`flex items-center space-x-2 font-mono font-semibold group-hover:translate-x-1 transition-transform ${colors.text}`}>
-                    <span>{product.status === 'coming' || product.status === 'future' ? 'View Roadmap' : 'Learn More'}</span>
+                    <span>Learn More</span>
                     <ArrowRight className="w-4 h-4" />
                   </div>
                 </Link>
@@ -233,28 +206,24 @@ export default function ProductsPage() {
       <section className="px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="mono-heading text-4xl text-white mb-6">
-            Join the Builders
+            Start Building
           </h2>
           <p className="text-xl text-steel-400 mb-8">
-            Open-core infrastructure. Community-driven roadmap. Built for production.
+            Production-ready memory infrastructure. Get started in minutes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://github.com/novyxlabs/novyx-core"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/contact"
               className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-pulse text-white font-mono font-semibold hover:bg-pulse-600 transition-all shadow-lg shadow-pulse/20"
             >
-              Star on GitHub
-            </a>
-            <a
-              href="https://github.com/novyxlabs/ideas"
-              target="_blank"
-              rel="noopener noreferrer"
+              Get API Key
+            </Link>
+            <Link
+              href="/products/langchain"
               className="inline-flex items-center justify-center px-8 py-4 rounded-lg border border-steel-600 text-white font-mono font-semibold hover:bg-steel-800/30 transition-all"
             >
-              Share Your Ideas
-            </a>
+              pip install novyx-langchain
+            </Link>
           </div>
         </div>
       </section>
