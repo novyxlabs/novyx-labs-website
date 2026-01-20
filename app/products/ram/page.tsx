@@ -42,18 +42,17 @@ export default function RAMPage() {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
-              href="/contact"
+              href="/signup"
               className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-purple-500 text-white font-mono font-semibold hover:bg-purple-600 transition-all shadow-lg shadow-purple-500/20"
             >
               <Zap className="mr-2 w-5 h-5" />
-              Get API Key
+              Start Free
             </Link>
             <Link
-              href="/docs"
+              href="/pricing"
               className="inline-flex items-center justify-center px-8 py-4 rounded-lg border border-steel-600 text-white font-mono font-semibold hover:bg-steel-800/30 transition-all"
             >
-              <Code className="mr-2 w-5 h-5" />
-              View Documentation
+              View Pricing
             </Link>
           </div>
         </div>
@@ -109,8 +108,46 @@ export default function RAMPage() {
         </div>
       </section>
 
-      {/* Features */}
+      {/* v1.1 Features */}
       <section className="px-4 sm:px-6 lg:px-8 py-20">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex items-center space-x-3 mb-6">
+            <span className="px-3 py-1 rounded-full bg-green-500/20 text-green-400 border border-green-500/30 text-xs font-mono font-bold">
+              NEW
+            </span>
+            <h2 className="mono-heading text-3xl text-white">v1.1 Features</h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
+            {[
+              {
+                title: 'Key Lifecycle Management',
+                description: 'Full control over API key creation, rotation, and expiration. Programmatic key management via API.',
+              },
+              {
+                title: 'Auto-Revocation',
+                description: 'Automatic key revocation on suspicious activity. Configurable security policies per key.',
+              },
+              {
+                title: 'Circuit Breaker',
+                description: 'Built-in circuit breaker pattern prevents cascade failures. Automatic recovery and health checks.',
+              },
+              {
+                title: 'Rate Limiting',
+                description: 'Configurable rate limits per key, per endpoint. Burst allowances and quota management.',
+              },
+            ].map((feature) => (
+              <div key={feature.title} className="p-6 rounded-xl bg-purple-950/10 border border-purple-800/30">
+                <h3 className="text-lg font-mono font-bold text-white mb-2">{feature.title}</h3>
+                <p className="text-steel-400 text-sm">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features */}
+      <section className="px-4 sm:px-6 lg:px-8 py-20 bg-void-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="mono-heading text-3xl text-white mb-12">API Features</h2>
 
@@ -158,7 +195,7 @@ export default function RAMPage() {
       </section>
 
       {/* Use Cases */}
-      <section className="px-4 sm:px-6 lg:px-8 py-20 bg-void-800/30">
+      <section className="px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-6xl mx-auto">
           <h2 className="mono-heading text-3xl text-white mb-12">Built For</h2>
 
@@ -272,17 +309,17 @@ export default function RAMPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              href="/signup"
               className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-purple-500 text-white font-mono font-semibold hover:bg-purple-600 transition-all shadow-lg shadow-purple-500/20"
             >
               <Zap className="mr-2 w-5 h-5" />
-              Get API Key
+              Start Free
             </Link>
             <Link
-              href="/products"
+              href="/pricing"
               className="inline-flex items-center justify-center px-8 py-4 rounded-lg border border-steel-600 text-white font-mono font-semibold hover:bg-steel-800/30 transition-all"
             >
-              Explore All Products
+              View Pricing
             </Link>
           </div>
         </div>

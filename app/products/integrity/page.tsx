@@ -17,8 +17,8 @@ export default function IntegrityPage() {
         <div className="relative z-10 max-w-5xl mx-auto">
           {/* Badge */}
           <div className="flex items-center space-x-3 mb-6">
-            <span className="px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30 text-xs font-mono font-bold">
-              BETA
+            <span className="px-3 py-1 rounded-full bg-green-500/20 text-green-400 border border-green-500/30 text-xs font-mono font-bold">
+              NEW
             </span>
             <span className="text-steel-500 font-mono text-sm">Enterprise Security · Request Demo</span>
           </div>
@@ -50,10 +50,10 @@ export default function IntegrityPage() {
               Request Demo
             </a>
             <a
-              href="mailto:security@novyxlabs.com"
+              href="/contact"
               className="inline-flex items-center justify-center px-8 py-4 rounded-lg border border-steel-600 text-white font-mono font-semibold hover:bg-steel-800/30 transition-all"
             >
-              Contact Security Team
+              Contact Sales
             </a>
           </div>
         </div>
@@ -236,14 +236,14 @@ export default function IntegrityPage() {
               Schedule Security Review
             </a>
             <a
-              href="mailto:security@novyxlabs.com"
+              href="/contact"
               className="inline-flex items-center justify-center px-8 py-4 rounded-lg border border-steel-600 text-white font-mono font-semibold hover:bg-steel-800/30 transition-all"
             >
-              Contact Security Team
+              Contact Sales
             </a>
           </div>
           <p className="mt-8 text-steel-500 text-sm font-mono">
-            Beta access available for enterprise security teams · NDA required
+            Enterprise access available · Contact us for details
           </p>
         </div>
       </section>

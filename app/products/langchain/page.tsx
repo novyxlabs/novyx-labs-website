@@ -74,22 +74,21 @@ export default function LangChainPage() {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-orange-500 text-white font-mono font-semibold hover:bg-orange-600 transition-all shadow-lg shadow-orange-500/20"
-            >
-              <Package className="mr-2 w-5 h-5" />
-              Get API Key
-            </Link>
             <a
               href="https://pypi.org/project/novyx-langchain/"
               target="_blank"
               rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-orange-500 text-white font-mono font-semibold hover:bg-orange-600 transition-all shadow-lg shadow-orange-500/20"
+            >
+              <Package className="mr-2 w-5 h-5" />
+              View on PyPI
+            </a>
+            <Link
+              href="/docs"
               className="inline-flex items-center justify-center px-8 py-4 rounded-lg border border-steel-600 text-white font-mono font-semibold hover:bg-steel-800/30 transition-all"
             >
-              View on PyPI
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
+              View Documentation
+            </Link>
           </div>
         </div>
       </section>
@@ -292,18 +291,20 @@ messages = history.messages  `}<span className="text-green-400"># All messages r
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
+            <a
+              href="https://pypi.org/project/novyx-langchain/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-orange-500 text-white font-mono font-semibold hover:bg-orange-600 transition-all shadow-lg shadow-orange-500/20"
             >
               <Package className="mr-2 w-5 h-5" />
-              Get API Key
-            </Link>
+              View on PyPI
+            </a>
             <Link
-              href="/products"
+              href="/docs"
               className="inline-flex items-center justify-center px-8 py-4 rounded-lg border border-steel-600 text-white font-mono font-semibold hover:bg-steel-800/30 transition-all"
             >
-              Explore All Products
+              View Documentation
             </Link>
           </div>
         </div>

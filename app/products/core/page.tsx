@@ -35,18 +35,17 @@ export default function CorePage() {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
-              href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-pulse text-white font-mono font-semibold hover:bg-pulse-600 transition-all shadow-lg"
-            >
-              <ArrowRight className="mr-2 w-5 h-5" />
-              Get Access
-            </Link>
-            <Link
               href="/docs"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-lg border border-steel-600 text-white font-mono font-semibold hover:bg-steel-800/30 transition-all"
+              className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-pulse text-white font-mono font-semibold hover:bg-pulse-600 transition-all shadow-lg"
             >
               <Code className="mr-2 w-5 h-5" />
               View Documentation
+            </Link>
+            <Link
+              href="/signup"
+              className="inline-flex items-center justify-center px-8 py-4 rounded-lg border border-steel-600 text-white font-mono font-semibold hover:bg-steel-800/30 transition-all"
+            >
+              Join Waitlist
             </Link>
           </div>
         </div>
@@ -192,17 +191,17 @@ const results = await core.search({
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              href="/docs"
               className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-pulse text-white font-mono font-semibold hover:bg-pulse-600 transition-all shadow-lg"
             >
-              <ArrowRight className="mr-2 w-5 h-5" />
-              Get Access
+              <Code className="mr-2 w-5 h-5" />
+              View Documentation
             </Link>
             <Link
-              href="/products"
+              href="/signup"
               className="inline-flex items-center justify-center px-8 py-4 rounded-lg border border-steel-600 text-white font-mono font-semibold hover:bg-steel-800/30 transition-all"
             >
-              Explore All Products
+              Join Waitlist
             </Link>
           </div>
         </div>

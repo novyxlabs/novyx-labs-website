@@ -29,10 +29,15 @@ export function InfraHero() {
         </p>
 
         {/* Description */}
-        <p className="text-xl text-steel-400 max-w-3xl mx-auto mb-12 leading-relaxed">
+        <p className="text-xl text-steel-400 max-w-3xl mx-auto mb-8 leading-relaxed">
           Production-ready memory infrastructure for LangChain, autonomous agents, and enterprise AI.
           Cryptographically verifiable. Semantically searchable. Built for scale.
         </p>
+
+        {/* Free badge */}
+        <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-sm font-mono font-medium mb-12">
+          <span>✓ Free for developers</span>
+        </div>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -68,7 +73,7 @@ export function InfraHero() {
           </div>
           <div className="flex items-center space-x-2">
             <Database className="w-4 h-4" />
-            <span>Production ready</span>
+            <span>Sub-100ms latency</span>
           </div>
         </div>
       </div>

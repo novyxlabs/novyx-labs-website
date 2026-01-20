@@ -10,10 +10,20 @@ const navigation = {
     { name: 'Novyx Integrity', href: '/products/integrity' },
     { name: 'LangChain Integration', href: '/products/langchain' },
   ],
+  developers: [
+    { name: 'Documentation', href: '/docs' },
+    { name: 'API Reference', href: '/developers' },
+    { name: 'Changelog', href: '/changelog' },
+  ],
   company: [
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Careers', href: 'mailto:careers@novyxlabs.com' },
+    { name: 'Pricing', href: '/pricing' },
+  ],
+  resources: [
+    { name: 'Blog', href: '/blog' },
+    { name: 'Status', href: '/status' },
+    { name: 'Security', href: '/security' },
   ],
   legal: [
     { name: 'Privacy Policy', href: '/privacy' },
@@ -25,7 +35,7 @@ export function InfraFooter() {
   return (
     <footer className="bg-void-800/30 border-t border-steel-800/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-8 mb-12">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
@@ -59,11 +69,45 @@ export function InfraFooter() {
             </ul>
           </div>
 
+          {/* Developers */}
+          <div>
+            <h3 className="text-white font-mono font-bold text-sm mb-4">Developers</h3>
+            <ul className="space-y-2">
+              {navigation.developers.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    href={item.href}
+                    className="text-steel-400 hover:text-white text-sm transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Company */}
           <div>
             <h3 className="text-white font-mono font-bold text-sm mb-4">Company</h3>
             <ul className="space-y-2">
               {navigation.company.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    href={item.href}
+                    className="text-steel-400 hover:text-white text-sm transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="text-white font-mono font-bold text-sm mb-4">Resources</h3>
+            <ul className="space-y-2">
+              {navigation.resources.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}

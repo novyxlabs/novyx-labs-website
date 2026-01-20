@@ -68,8 +68,8 @@ export function ProductGrid() {
             className="group relative p-6 rounded-2xl border transition-all duration-300 bg-green-950/10 border-green-800/30 hover:border-green-600 hover:shadow-2xl block"
           >
             <div className="absolute top-4 right-4">
-              <span className="px-2 py-0.5 rounded-full text-xs font-mono font-bold border bg-blue-500/20 text-blue-400 border-blue-500/30">
-                BETA
+              <span className="px-2 py-0.5 rounded-full text-xs font-mono font-bold border bg-green-500/20 text-green-400 border-green-500/30">
+                NEW
               </span>
             </div>
             <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 border bg-green-500/10 border-green-500/30">
@@ -79,7 +79,7 @@ export function ProductGrid() {
             </div>
             <h3 className="font-mono font-bold text-xl text-white mb-2">Novyx Integrity</h3>
             <p className="text-steel-300 font-medium mb-2 text-sm">Enterprise security</p>
-            <p className="text-steel-500 text-xs mb-4">Memory verification • SOC 2</p>
+            <p className="text-steel-500 text-xs mb-4">Memory verification • Compliance</p>
             <span className="inline-flex items-center text-green-400 font-mono font-semibold text-sm group-hover:translate-x-1 transition-transform">
               Learn More →
             </span>

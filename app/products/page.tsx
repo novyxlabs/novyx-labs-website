@@ -33,11 +33,11 @@ export default function ProductsPage() {
     {
       name: 'Novyx Integrity',
       tagline: 'Enterprise security',
-      description: 'Security infrastructure for mission-critical AI agents. Real-time poisoning detection. Compliance-ready audit trails for SOC 2, GDPR, HIPAA.',
-      status: 'beta',
+      description: 'Security infrastructure for mission-critical AI agents. Real-time poisoning detection. Compliance-ready audit trails with enterprise-grade security.',
+      status: 'new',
       href: '/products/integrity',
       Icon: Shield,
-      metrics: ['<1ms detection', '100% coverage', 'SOC 2 ready'],
+      metrics: ['<1ms detection', '100% coverage', 'Enterprise-grade'],
       features: ['Poisoning detection', 'Auto-rollback', 'Compliance reports', 'Forensic timeline'],
     },
     {
@@ -61,9 +61,9 @@ export default function ProductsPage() {
           icon: 'bg-pulse-500/10 border-pulse-500/30 text-pulse-400',
           text: 'text-pulse-400',
         }
-      case 'beta':
+      case 'new':
         return {
-          badge: 'bg-blue-500/20 text-blue-400 border-blue-500/30',
+          badge: 'bg-green-500/20 text-green-400 border-green-500/30',
           card: 'bg-green-950/10 border-green-800/30 hover:border-green-600',
           icon: 'bg-green-500/10 border-green-500/30 text-green-400',
           text: 'text-green-400',

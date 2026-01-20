@@ -1,10 +1,10 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Check, Zap, Shield, Building2 } from 'lucide-react'
+import { Check, Zap, Building2, Shield } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Pricing - Novyx Labs',
-  description: 'Simple, transparent pricing for Novyx memory infrastructure. Free tier for developers, production plans for teams, enterprise for scale.',
+  description: 'Simple, transparent pricing for Novyx memory infrastructure. Free tier for developers, Pro for teams, Enterprise for scale.',
 }
 
 export default function PricingPage() {
@@ -26,23 +26,23 @@ export default function PricingPage() {
       <section className="px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Developer */}
+            {/* Developer - Free */}
             <div className="p-8 rounded-2xl bg-steel-900/20 border border-steel-700/30">
               <div className="flex items-center space-x-2 mb-4">
                 <Zap className="w-6 h-6 text-steel-400" />
                 <h3 className="text-xl font-mono font-bold text-white">Developer</h3>
               </div>
-              <p className="text-steel-400 mb-6">For side projects and prototypes</p>
+              <p className="text-steel-400 mb-6">Best for testing and prototypes</p>
               <div className="text-5xl font-mono font-bold text-white mb-2">Free</div>
               <p className="text-steel-500 text-sm mb-8">No credit card required</p>
 
               <ul className="space-y-3 mb-8">
                 {[
-                  '10,000 API calls/month',
-                  '1GB storage',
-                  '1 project',
-                  'Community support',
+                  '1,000 memories',
+                  '1 tenant',
                   'novyx-langchain access',
+                  'Community support',
+                  'API access',
                 ].map((feature) => (
                   <li key={feature} className="flex items-start space-x-3 text-steel-300 text-sm">
                     <Check className="w-5 h-5 text-green-400 flex-shrink-0" />
@@ -52,14 +52,14 @@ export default function PricingPage() {
               </ul>
 
               <Link
-                href="/contact"
-                className="block w-full text-center px-6 py-3 rounded-lg border border-steel-600 text-white font-mono font-semibold hover:bg-steel-800/30 transition-all"
+                href="/signup"
+                className="block w-full text-center px-6 py-3 rounded-lg bg-green-500 text-white font-mono font-semibold hover:bg-green-600 transition-all"
               >
-                Get Started
+                Get Started Free
               </Link>
             </div>
 
-            {/* Production */}
+            {/* Pro */}
             <div className="p-8 rounded-2xl bg-pulse-950/20 border-2 border-pulse-600 relative">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                 <span className="px-3 py-1 rounded-full bg-pulse text-white text-xs font-mono font-bold">
@@ -69,7 +69,7 @@ export default function PricingPage() {
 
               <div className="flex items-center space-x-2 mb-4">
                 <Building2 className="w-6 h-6 text-pulse-400" />
-                <h3 className="text-xl font-mono font-bold text-white">Production</h3>
+                <h3 className="text-xl font-mono font-bold text-white">Pro</h3>
               </div>
               <p className="text-steel-400 mb-6">For production applications</p>
               <div className="text-5xl font-mono font-bold text-white mb-2">
@@ -79,12 +79,12 @@ export default function PricingPage() {
 
               <ul className="space-y-3 mb-8">
                 {[
-                  '1M API calls/month',
-                  '100GB storage',
-                  'Unlimited projects',
-                  'Priority support',
-                  '99.9% SLA',
+                  '50,000 memories',
+                  '5 tenants',
+                  'Email support',
+                  'Priority API access',
                   'Advanced analytics',
+                  '99.9% uptime SLA',
                 ].map((feature) => (
                   <li key={feature} className="flex items-start space-x-3 text-steel-300 text-sm">
                     <Check className="w-5 h-5 text-pulse-400 flex-shrink-0" />
@@ -97,7 +97,7 @@ export default function PricingPage() {
                 href="/contact"
                 className="block w-full text-center px-6 py-3 rounded-lg bg-pulse text-white font-mono font-semibold hover:bg-pulse-600 transition-all"
               >
-                Contact Sales
+                Start Pro
               </Link>
             </div>
 
@@ -113,13 +113,13 @@ export default function PricingPage() {
 
               <ul className="space-y-3 mb-8">
                 {[
-                  'Unlimited API calls',
-                  'Unlimited storage',
+                  'Unlimited memories',
+                  'Unlimited tenants',
                   'Novyx Integrity included',
-                  'SOC 2 Type II',
-                  'HIPAA/GDPR compliance',
-                  'Dedicated support',
+                  'Enterprise security controls',
                   'Custom SLA',
+                  'SSO / SAML',
+                  'Dedicated support',
                   'On-premise option',
                 ].map((feature) => (
                   <li key={feature} className="flex items-start space-x-3 text-steel-300 text-sm">
